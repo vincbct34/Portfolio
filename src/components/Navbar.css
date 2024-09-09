@@ -1,0 +1,26 @@
+nav {
+  position: absolute;
+  top: 2em;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+button.clicked {
+  transform: rotate(180deg);
+  margin-bottom: 20px;
+}
+
+.links a {
+  padding: 20px;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
