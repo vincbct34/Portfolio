@@ -16,10 +16,10 @@ export const Header = () => {
       <div className="ColorMode" data-theme={isDark ? "dark" : "light"}>
         <div className="Language">
           {t("languageSettings.chooseLanguage")}
-          <button onClick={() => i18n.changeLanguage("en")} style={{ padding: '20px' }}>
+          <button onClick={() => i18n.changeLanguage("en")} style={{ padding: '10px' }}>
             <img src="/us-flag.png" alt="English" />
           </button>
-          <button onClick={() => i18n.changeLanguage("fr")}>
+          <button onClick={() => i18n.changeLanguage("fr")} style={{ padding: '10px' }}>
             <img src="/france-flag.png" alt="French" />
           </button>
         </div>
