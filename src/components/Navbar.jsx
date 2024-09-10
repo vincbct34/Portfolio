@@ -8,6 +8,8 @@ import './Navbar.css';
 export const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [shownPage, setShownPage] = useState('');
+
   const linksRef = useRef(null);
   const containerRef = useRef(null);
   const { t } = useTranslation("global");

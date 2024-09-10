@@ -8,7 +8,9 @@ import { Navbar } from "./components/Navbar";
 
 export const App = () => {
   const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
+
   const { t, i18n } = useTranslation("global")
 
   return (
