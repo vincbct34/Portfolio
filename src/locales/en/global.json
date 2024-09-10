@@ -1,0 +1,13 @@
+{
+ "languageSettings": {
+  "chooseLanguage": "Choose Language: "
+ },
+ "darkMode": {
+    "text": "Dark mode"
+ },
+ "links": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+ }
+}

@@ -1,6 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 import "./ToggleDarkMode.css";
 
 export const ToggleDarkMode = ({ handleChange, isChecked }) => {
+  const { t } = useTranslation("global");
+
   return (
     <div className="toggle-container">
       <input
@@ -10,7 +14,7 @@ export const ToggleDarkMode = ({ handleChange, isChecked }) => {
         onChange={handleChange}
         checked={isChecked}
       />
-      <label htmlFor="check">Dark Mode</label>
+      <label htmlFor="check">{t("darkMode.text")}</label>
     </div>
   );
 };

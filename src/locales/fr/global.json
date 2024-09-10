@@ -1,0 +1,13 @@
+{
+ "languageSettings": {
+  "chooseLanguage": "Choisir la langue : "
+ },
+ "darkMode": {
+    "text": "Mode sombre"
+ },
+ "links": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets"
+ }
+}
