@@ -1,59 +1,47 @@
 import { useState, useRef, useEffect } from 'react';
 import { SlArrowUp } from 'react-icons/sl';
 import { useTranslation } from 'react-i18next';
-// import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
+import { RiComputerLine } from "react-icons/ri";
+import { GrContact } from "react-icons/gr";
+import { SiAboutdotme } from "react-icons/si";
 
 import './Navbar.css';
 
 export const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
-  const [shownPage, setShownPage] = useState('');
 
   const linksRef = useRef(null);
   const containerRef = useRef(null);
   const { t } = useTranslation("global");
 
   const links = [
-    {
-      id: 1,
-      url: '/',
-      text: t("links.home"),
-    },
-    {
-      id: 2,
-      url: '/about',
-      text: t("links.about"),
-    },
-    {
-      id: 3,
-      url: '/projects',
-      text: t("links.projects"),
-    },
-    {
-      id: 4,
-      url: '/contact',
-      text: 'Contact',
-    },
-  ];
-
-  // const social = [
-  //   {
-  //     id: 1,
-  //     url: 'https://github.com/vincbct34',
-  //     icon: <FaGithub />,
-  //   },
-  //   {
-  //     id: 2,
-  //     url: 'https://www.linkedin.com/in/vincent-bichat/',
-  //     icon: <FaLinkedin />,
-  //   },
-  //   {
-  //     id: 3,
-  //     url: 'https://www.facebook.com/vincentbct34/',
-  //     icon: <FaFacebook />,
-  //   },
-  // ];
+      {
+        id: 1,
+        url: '/',
+        text: t("links.home"),
+        icon: <span className="icon"><FaHome size={20}/></span>,
+      },
+      {
+        id: 2,
+        url: '/about',
+        text: t("links.about"),
+        icon: <span className="icon"><SiAboutdotme size={20}/></span>,
+      },
+      {
+        id: 3,
+        url: '/projects',
+        text: t("links.projects"),
+        icon: <span className="icon"><RiComputerLine size={20}/></span>,
+      },
+      {
+        id: 4,
+        url: '/contact',
+        text: 'Contact',
+        icon: <span className="icon"><GrContact size={20}/></span>,
+      },
+    ];
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -81,10 +69,10 @@ export const Navbar = () => {
         <div className="links-container" ref={containerRef} style={{ height: '0px', overflow: 'hidden', transition: 'height 0.3s ease' }}>
           <div className="links" ref={linksRef}>
             {links.map((link) => {
-              const { id, url, text } = link;
+              const { id, url, text, icon } = link;
               return (
                 <a key={id} href={url}>
-                  {text}
+                  {text} {icon}
                 </a>
               );
             })}
