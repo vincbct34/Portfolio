@@ -13,6 +13,7 @@ button {
   cursor: pointer;
   transition: ease 0.3s;
   color: var(--primary-text-color);
+  transition: color 0.25s ease-in-out;
 }
 
 button.clicked {
@@ -24,4 +25,5 @@ button.clicked {
   padding: 20px;
   text-decoration: none;
   color: var(--primary-text-color);
+  transition: color 0.25s ease-in-out;
 }

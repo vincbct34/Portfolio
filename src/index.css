@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Comfortaa", sans-serif;
+  overflow: hidden;
 }
 
 :root {
@@ -16,7 +17,7 @@
   --primary-text-color: #000000;
   --secondary-text-color: #ffffff;
   --toggle-bg: #e0e0e0;
-  --toggle-fg: #000000;
+  --toggle-fg: #303030;
 }
 
 [data-theme="dark"] {

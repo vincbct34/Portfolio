@@ -8,30 +8,3 @@
   background-color: var(--background-color);
   transition: background-color 0.25s ease-in-out;
 }
-
-.title {
-  color: var(--primary-text-color);
-  margin-bottom: 50px;
-}
-
-.box {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: var(--foreground-color);
-  color: var(--secondary-text-color);
-}
-
-.Language {
-  position: absolute;
-  top: 2em;
-  left: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary-text-color);
-}
-
-.Language img {
-  width: 30px;
-  height: auto;
-}
