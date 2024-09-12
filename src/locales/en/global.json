@@ -1,13 +1,18 @@
 {
- "languageSettings": {
-  "chooseLanguage": "Choose Language: "
- },
- "darkMode": {
+  "languageSettings": {
+    "chooseLanguage": "Choose Language: "
+  },
+  "darkMode": {
     "text": "Dark mode"
- },
- "links": {
+  },
+  "links": {
     "home": "Home",
     "about": "About",
     "projects": "Projects"
- }
+  },
+  "home": {
+    "h1": "My name is Vincent",
+    "h2": "Hello",
+    "h3": "I am a student developer at EPITECH Montpellier"
+  }
 }

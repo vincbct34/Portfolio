@@ -1,13 +1,18 @@
 {
  "languageSettings": {
-  "chooseLanguage": "Choisir la langue : "
+   "chooseLanguage": "Choisir la langue : "
  },
  "darkMode": {
-    "text": "Mode sombre"
+   "text": "Mode sombre"
  },
  "links": {
-    "home": "Accueil",
-    "about": "À propos",
-    "projects": "Projets"
+   "home": "Accueil",
+   "about": "À propos",
+   "projects": "Projets"
+ },
+ "home": {
+   "h1": "Moi c'est Vincent",
+   "h2": "Salut",
+   "h3": "Je suis étudiant développeur à EPITECH Montpellier"
  }
 }

@@ -9,7 +9,7 @@ import './index.css'
 
 i18next.init({
   interpolation: { escapeValue: false },
-    lng: 'auto',
+    lng: 'en',
     fallbackLng: 'en',
   resources: {
     en: {

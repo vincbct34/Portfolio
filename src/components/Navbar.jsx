@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { SlArrowUp } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { SlArrowUp } from 'react-icons/sl';
 import { FaHome } from 'react-icons/fa';
 import { RiComputerLine } from "react-icons/ri";
 import { GrContact } from "react-icons/gr";
@@ -17,31 +18,31 @@ export const Navbar = () => {
   const { t } = useTranslation("global");
 
   const links = [
-      {
-        id: 1,
-        url: '/',
-        text: t("links.home"),
-        icon: <span className="icon"><FaHome size={20}/></span>,
-      },
-      {
-        id: 2,
-        url: '/about',
-        text: t("links.about"),
-        icon: <span className="icon"><SiAboutdotme size={20}/></span>,
-      },
-      {
-        id: 3,
-        url: '/projects',
-        text: t("links.projects"),
-        icon: <span className="icon"><RiComputerLine size={20}/></span>,
-      },
-      {
-        id: 4,
-        url: '/contact',
-        text: 'Contact',
-        icon: <span className="icon"><GrContact size={20}/></span>,
-      },
-    ];
+    {
+      id: 1,
+      url: '/',
+      text: t("links.home"),
+      icon: <span className="icon"><FaHome size={20}/></span>,
+    },
+    {
+      id: 2,
+      url: '/about',
+      text: t("links.about"),
+      icon: <span className="icon"><SiAboutdotme size={20}/></span>,
+    },
+    {
+      id: 3,
+      url: '/projects',
+      text: t("links.projects"),
+      icon: <span className="icon"><RiComputerLine size={20}/></span>,
+    },
+    {
+      id: 4,
+      url: '/contact',
+      text: 'Contact',
+      icon: <span className="icon"><GrContact size={20}/></span>,
+    },
+  ];
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -50,6 +51,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
+
     if (showLinks) {
       containerRef.current.style.height = `${linksHeight}px`;
     } else {
@@ -70,10 +72,11 @@ export const Navbar = () => {
           <div className="links" ref={linksRef}>
             {links.map((link) => {
               const { id, url, text, icon } = link;
+
               return (
-                <a key={id} href={url}>
+                <Link key={id} to={url}>
                   {text} {icon}
-                </a>
+                </Link>
               );
             })}
           </div>

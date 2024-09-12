@@ -13,18 +13,16 @@
 
 :root {
   --background-color: #ffffff;
-  --foreground-color: #000000;
-  --primary-text-color: #000000;
-  --secondary-text-color: #ffffff;
+  --text-color: #000000;
   --toggle-bg: #e0e0e0;
   --toggle-fg: #303030;
+  --shadow-color: #000000;
 }
 
 [data-theme="dark"] {
   --background-color: #000000;
-  --foreground-color: #ffffff;
-  --primary-text-color: #ffffff;
-  --secondary-text-color: #000000;
+  --text-color: #ffffff;
   --toggle-bg: #303030;
   --toggle-fg: #ffffff;
+  --shadow-color: #ffffff;
 }

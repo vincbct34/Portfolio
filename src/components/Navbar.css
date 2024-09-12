@@ -11,14 +11,13 @@ button {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  transition: ease 0.3s;
-  color: var(--primary-text-color);
-  transition: color 0.25s ease-in-out;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.25s ease-in-out;
+  padding-top: 20px;
 }
 
 button.clicked {
   transform: rotate(180deg);
-  margin-bottom: 20px;
 }
 
 .links {
@@ -37,7 +36,7 @@ button.clicked {
   padding-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  color: var(--primary-text-color);
+  color: var(--text-color);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
