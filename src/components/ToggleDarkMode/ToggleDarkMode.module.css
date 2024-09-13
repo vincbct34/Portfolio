@@ -1,13 +1,16 @@
+/* Container for the toggle switch */
 .toggle-container {
   position: absolute;
   top: 2em;
   right: 2em;
 }
 
+/* Hide the default checkbox input */
 .toggle {
   visibility: hidden;
 }
 
+/* Label styling for the toggle switch */
 .toggle + label {
   display: flex;
   align-items: center;
@@ -15,8 +18,10 @@
   cursor: pointer;
   color: var(--text-color);
   transition: color 250ms ease-in-out;
+  position: relative; /* Position relative for positioning the pseudo-elements */
 }
 
+/* Styling for the toggle switch slider */
 .toggle + label::before {
   content: "";
   height: 1em;
@@ -27,6 +32,7 @@
   transition: background-color 250ms ease-in-out;
 }
 
+/* Styling for the toggle switch handle */
 .toggle + label::after {
   content: "";
   height: 0.8em;
@@ -38,6 +44,7 @@
   transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
+/* Move the toggle handle to the right when checked */
 .toggle:checked + label::after {
   transform: translateX(100%);
 }

@@ -1,0 +1,192 @@
+/* General Home container styling */
+.Home {
+  display: flex;
+  padding-bottom: 9vh;
+  height: 91vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  transition: background-color 0.25s ease-in-out;
+  cursor: default;
+}
+
+/* Container for the first section of the home page */
+.FirstHomeContainer {
+  height: 40vh;
+  width: 75vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  color: var(--text-color);
+}
+
+/* Animation for fading in and moving up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile image container styling */
+.ProfileContainer {
+  opacity: 0;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 80px var(--shadow-color);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Profile image styling */
+.ProfileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(10px);
+}
+
+/* Presentation section styling */
+.Presentation {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.Presentation h1 {
+  font-size: 44px;
+  margin-bottom: 1rem;
+}
+
+.Presentation h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+.Presentation h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  max-width: 450px;
+}
+
+.Presentation p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Wave emoji styling */
+.Wave {
+  display: inline-block;
+}
+
+/* Animation for the wave emoji */
+@keyframes WaveAnimation {
+  0% { transform: rotate(0deg) scale(1); }
+  10% { transform: rotate(14deg) scale(1.2); }
+  20% { transform: rotate(-8deg) scale(1.4); }
+  30% { transform: rotate(14deg) scale(1.4); }
+  40% { transform: rotate(-4deg) scale(1.4); }
+  50% { transform: rotate(10deg) scale(1.4); }
+  60% { transform: rotate(0deg) scale(1.4); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.Wave:hover {
+  animation: WaveAnimation 1s ease-in-out 1;
+}
+
+/* Container for the second section of the home page */
+.SecondHomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-color);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* Container for technology items */
+.SecondHomeContainer .Technologies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Styling for each technology item wrapper */
+.SecondHomeContainer .Technologies .TechWrapper {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+/* Technology item description styling */
+.SecondHomeContainer .Technologies .TechWrapper p {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SecondHomeContainer .Technologies .TechWrapper:hover p {
+  opacity: 1;
+}
+
+/* Technology logo styling */
+.SecondHomeContainer .Technologies img {
+  width: 80px;
+  height: auto;
+  background: none;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Styling for non-custom wrapper tech items */
+.SecondHomeContainer .Technologies .OtherDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.SecondHomeContainer .Technologies .OtherDiv:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px var(--shadow-color));
+}
+
+.SecondHomeContainer .Technologies .ReactDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes TurnAnimation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.SecondHomeContainer .Technologies .ReactDiv:hover {
+  animation: TurnAnimation 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px var(--shadow-color));
+}

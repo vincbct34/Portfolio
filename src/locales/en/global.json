@@ -1,9 +1,9 @@
 {
   "languageSettings": {
-    "chooseLanguage": "Choose Language: "
+    "chooseLanguage": "Choose language: "
   },
   "darkMode": {
-    "text": "Dark mode"
+    "text": "Dark Mode"
   },
   "links": {
     "home": "Home",
@@ -11,8 +11,15 @@
     "projects": "Projects"
   },
   "home": {
-    "h1": "My name is Vincent",
+    "h1": "I'm Vincent.",
     "h2": "Hello",
-    "h3": "I am a student developer at EPITECH Montpellier"
+    "h3": "I'm a developer student at EPITECH Montpellier.",
+    "welcome": "Welcome to my Portfolio!",
+    "technologiesTitle": "Technologies used:"
+  },
+  "technologies": {
+    "vite": "Vite",
+    "brain": "My brain",
+    "react": "React"
   }
 }

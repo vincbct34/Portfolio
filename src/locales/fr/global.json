@@ -1,18 +1,25 @@
 {
- "languageSettings": {
-   "chooseLanguage": "Choisir la langue : "
- },
- "darkMode": {
-   "text": "Mode sombre"
- },
- "links": {
-   "home": "Accueil",
-   "about": "À propos",
-   "projects": "Projets"
- },
- "home": {
-   "h1": "Moi c'est Vincent",
-   "h2": "Salut",
-   "h3": "Je suis étudiant développeur à EPITECH Montpellier"
- }
+  "languageSettings": {
+    "chooseLanguage": "Choisir la langue : "
+  },
+  "darkMode": {
+    "text": "Mode sombre"
+  },
+  "links": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets"
+  },
+  "home": {
+    "h1": "Moi c'est Vincent.",
+    "h2": "Salut",
+    "h3": "Je suis étudiant développeur à EPITECH Montpellier.",
+    "welcome": "Bienvenue sur mon Portfolio !",
+    "technologiesTitle": "Technologies utilisées :"
+  },
+  "technologies": {
+    "vite": "Vite",
+    "brain": "Mon cerveau",
+    "react": "React"
+  }
 }
