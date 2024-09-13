@@ -48,7 +48,7 @@ export const Navbar = () => {
     {
       id: 4,
       url: '/contact',
-      text: t("links.contact"),
+      text: 'Contact',
       icon: <span className={styles.icon}><GrContact size={20}/></span>,
     },
   ];
@@ -83,7 +83,7 @@ export const Navbar = () => {
         <div 
           className={styles.linksContainer} 
           ref={containerRef} 
-          style={{ height: '0px', overflow: 'hidden', transition: 'height 0.3s ease' }}
+          style={{ height: '0px', overflow: 'hidden', transition: 'height 0.5s ease' }}
         >
           <div className={styles.links} ref={linksRef}>
             {/* Render navigation links */}

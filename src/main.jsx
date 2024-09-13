@@ -9,6 +9,8 @@ import global_fr from './locales/fr/global.json';
 import { App } from './App.jsx';
 // Importing global styles
 import './assets/styles/global.css';
+// Importing AuthProvider
+import { AuthProvider } from './context/AuthContext';
 
 /**
  * Initialize i18next for internationalization
@@ -36,6 +38,8 @@ i18next.init({
  */
 ReactDOM.createRoot(document.getElementById('root')).render(
   <I18nextProvider i18n={i18next}>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </I18nextProvider>
 );
