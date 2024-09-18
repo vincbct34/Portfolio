@@ -1,0 +1,30 @@
+.buttonLink {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: var(--background-color);
+}
+
+.socialLink {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vh;
+  color: var(--text-color);
+  height: 16px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.github {
+  transform: translate(50px) scale(1.5);
+}
+
+.linkedin {
+  transform: translateX(35px) translateY(-35px) scale(1.5);
+}
+
+.facebook {
+  transform: translateY(-50px) scale(1.5);
+}

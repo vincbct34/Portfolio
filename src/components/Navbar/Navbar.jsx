@@ -9,23 +9,16 @@ import { SiAboutdotme } from 'react-icons/si';
 
 import styles from './Navbar.module.css';
 
-/**
- * Navbar Component
- * 
- * Renders a responsive navigation bar with links and a toggle button.
- * 
- * @returns {JSX.Element} The rendered Navbar component
- */
 export const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false); // State to control the visibility of the links
-  const [isClicked, setIsClicked] = useState(false); // State to control button style
+  const [showLinks, setShowLinks] = useState(false); 
+  const [isClicked, setIsClicked] = useState(false); 
 
-  const linksRef = useRef(null); // Ref for measuring the height of the links container
-  const containerRef = useRef(null); // Ref for applying height style to the container
-  const { t } = useTranslation("global"); // Translation function from i18next
-  const location = useLocation(); // Hook to get the current URL
+  const linksRef = useRef(null); 
+  const containerRef = useRef(null); 
+  const { t } = useTranslation("global"); 
+  const location = useLocation(); 
 
-  // Define navigation links with translation and icons
+  
   const links = [
     {
       id: 1,
@@ -53,27 +46,27 @@ export const Navbar = () => {
     },
   ];
 
-  // Toggle the visibility of the links
+  
   const toggleLinks = () => {
     setShowLinks(prevState => !prevState);
     setIsClicked(prevState => !prevState);
   };
 
-  // Effect to adjust the height of the container based on link visibility
+  
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
 
-    // Apply height transition based on visibility
+    
     containerRef.current.style.height = showLinks ? `${linksHeight}px` : '0px';
   }, [showLinks]);
 
-  // Determine the current page's logo
+  
   const currentPageLogo = links.find(link => link.url === location.pathname)?.icon;
 
   return (
     <div>
       <nav>
-        {/* Button to toggle links visibility */}
+        {}
         <button
           onClick={toggleLinks}
           className={isClicked ? styles.clicked : ''}
@@ -86,7 +79,7 @@ export const Navbar = () => {
           style={{ height: '0px', overflow: 'hidden', transition: 'height 0.5s ease' }}
         >
           <div className={styles.links} ref={linksRef}>
-            {/* Render navigation links */}
+            {}
             {links.map((link) => {
               const { id, url, text, icon } = link;
               return (
@@ -97,7 +90,7 @@ export const Navbar = () => {
             })}
           </div>
         </div>
-        {/* Display the current page's logo */}
+        {}
         <div className={styles.currentPageLogo}>
           {currentPageLogo}
         </div>

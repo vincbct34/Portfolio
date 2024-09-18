@@ -19,7 +19,15 @@
   },
   "technologies": {
     "vite": "Vite",
-    "brain": "My brain",
     "react": "React"
+  },
+  "signup": {
+    "placeholderEmail": "Email Address",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "signUpButton": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "logInLink": "Log in!"
   }
 }

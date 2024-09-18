@@ -1,7 +1,6 @@
-/* General Home container styling */
 .Home {
   display: flex;
-  padding-bottom: 9vh;
+  padding-bottom: 15vh;
   height: 91vh;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +10,6 @@
   cursor: default;
 }
 
-/* Container for the first section of the home page */
 .FirstHomeContainer {
   height: 40vh;
   width: 75vh;
@@ -19,15 +17,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 7vh;
   color: var(--text-color);
 }
 
-/* Animation for fading in and moving up */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10vh);
   }
   100% {
     opacity: 1;
@@ -35,10 +32,9 @@
   }
 }
 
-/* Profile image container styling */
 .ProfileContainer {
   opacity: 0;
-  width: 250px;
+  width: 20vh;
   height: auto;
   border-radius: 50%;
   overflow: hidden;
@@ -46,20 +42,18 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 4px 80px var(--shadow-color);
+  box-shadow: 0 1vh 5vh var(--shadow-color);
   animation: fadeInUp 0.6s ease-out forwards;
   animation-delay: 0.4s;
 }
 
-/* Profile image styling */
 .ProfileImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translateY(10px);
+  transform: translateY(1vh);
 }
 
-/* Presentation section styling */
 .Presentation {
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
@@ -67,34 +61,32 @@
 }
 
 .Presentation h1 {
-  font-size: 44px;
-  margin-bottom: 1rem;
+  font-size: 3vh;
+  margin-bottom: 1vh;
 }
 
 .Presentation h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2vh;
+  margin-bottom: 1vh;
   font-weight: 100;
 }
 
 .Presentation h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 2vh;
+  margin-bottom: 2vh;
   font-weight: 300;
-  max-width: 450px;
+  max-width: 35vh;
 }
 
 .Presentation p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1vh;
+  line-height: 1.6vh;
 }
 
-/* Wave emoji styling */
 .Wave {
   display: inline-block;
 }
 
-/* Animation for the wave emoji */
 @keyframes WaveAnimation {
   0% { transform: rotate(0deg) scale(1); }
   10% { transform: rotate(14deg) scale(1.2); }
@@ -110,41 +102,34 @@
   animation: WaveAnimation 1s ease-in-out 1;
 }
 
-/* Container for the second section of the home page */
 .SecondHomeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 2vh;
   color: var(--text-color);
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   animation-delay: 0.6s;
 }
 
-/* Container for technology items */
 .SecondHomeContainer .Technologies {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
+  gap: 2vh;
 }
 
-/* Styling for each technology item wrapper */
 .SecondHomeContainer .Technologies .TechWrapper {
-  width: 140px;
-  height: 140px;
+  width: 10vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding-top: 25px;
+  gap: 1vh;
+  padding-top: 1vh;
 }
 
-/* Technology item description styling */
 .SecondHomeContainer .Technologies .TechWrapper p {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -154,24 +139,19 @@
   opacity: 1;
 }
 
-/* Technology logo styling */
 .SecondHomeContainer .Technologies img {
-  width: 80px;
+  width: 5vh;
   height: auto;
   background: none;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* Styling for non-custom wrapper tech items */
 .SecondHomeContainer .Technologies .OtherDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.3s ease-in-out;
 }
 
 .SecondHomeContainer .Technologies .OtherDiv:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   filter: drop-shadow(0 0 10px var(--shadow-color));
 }
 
@@ -191,4 +171,51 @@
 .SecondHomeContainer .Technologies .ReactDiv:hover {
   filter: drop-shadow(0 0 10px var(--shadow-color));
   animation: TurnAnimation 5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .Home {
+    padding-bottom: 5vh;
+  }
+
+  .FirstHomeContainer {
+    height: 55vh;
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .Presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Presentation h3 {
+    max-width: 40vh;
+  }
+
+  .SecondHomeContainer {
+    gap: 2vh;
+  }
+
+  .SecondHomeContainer h1 {
+    height: 5vh;
+    font-size: 3vh;
+  }
+
+  .SecondHomeContainer h2 {
+    height: 4vh;
+    font-size: 2vh;
+  }
+  
+  .SecondHomeContainer .Technologies img {
+    width: 5vh;
+    display: flex;
+  }
+
+  .SecondHomeContainer .Technologies .TechWrapper {
+    height: 15vh;
+  }
 }

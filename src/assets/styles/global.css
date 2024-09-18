@@ -1,32 +1,29 @@
-/* Define the Comfortaa font face */
+
 @font-face {
   font-family: "Comfortaa";
   src: local("Comfortaa-Light"), url("./../fonts/Comfortaa-Light.ttf") format("truetype");
 }
 
-/* Apply global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Comfortaa", sans-serif;
-  overflow: hidden; /* Prevent scrollbars from appearing */
+  overflow: hidden; 
 }
 
-/* Define default color variables */
 :root {
-  --background-color: #ffffff; /* White background */
-  --text-color: #000000; /* Black text */
-  --toggle-bg: #e0e0e0; /* Light background for toggles */
-  --toggle-fg: #303030; /* Dark foreground for toggles */
-  --shadow-color: #000000; /* Black shadow color */
+  --background-color: #ffffff; 
+  --text-color: #000000; 
+  --toggle-bg: #e0e0e0; 
+  --toggle-fg: #303030; 
+  --shadow-color: #000000; 
 }
 
-/* Define color variables for dark theme */
 [data-theme="dark"] {
-  --background-color: #000000; /* Black background */
-  --text-color: #ffffff; /* White text */
-  --toggle-bg: #303030; /* Dark background for toggles */
-  --toggle-fg: #ffffff; /* White foreground for toggles */
-  --shadow-color: #ffffff; /* White shadow color */
+  --background-color: #000000; 
+  --text-color: #ffffff; 
+  --toggle-bg: #303030; 
+  --toggle-fg: #ffffff; 
+  --shadow-color: #ffffff; 
 }

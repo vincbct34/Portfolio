@@ -1,44 +1,71 @@
-import { useState } from 'react';
-import { auth } from '../../firebaseConfig';
+import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { auth } from '../../firebaseConfig';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const onLogin = async (e) => {
+    e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      if (user) {
-        navigate('/');
-      }
+
+      navigate("/");
+      console.log(user);
     } catch (error) {
-      console.error('Error logging in:', error.message);
-      setError('Failed to log in. Please check your credentials.');
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+      console.log(errorCode, errorMessage);
     }
   };
 
   return (
     <div>
-      <h2>Login</h2>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      <button onClick={handleLogin}>Login</button>
-      {error && <p>{error}</p>} {/* Display error message if any */}
+      <p> FocusApp </p>
+      <form>
+        <div>
+          <label htmlFor="email-address">
+            Email address
+          </label>
+          <input
+            id="email-address"
+            name="email"
+            type="email"
+            required
+            placeholder="Email address"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="password">
+            Password
+          </label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div>
+          <button onClick={onLogin}>
+            Login
+          </button>
+        </div>
+      </form>
+      <p className="text-sm text-white text-center">
+        No account yet? {' '}
+        <NavLink to="/signup">
+          Sign up
+        </NavLink>
+      </p>
     </div>
   );
 };

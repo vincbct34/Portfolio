@@ -21,5 +21,14 @@
     "vite": "Vite",
     "brain": "Mon cerveau",
     "react": "React"
+  },
+  "signup": {
+    "placeholderEmail": "Adresse email",
+    "emailLabel": "Adresse email",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Mot de passe",
+    "signUpButton": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "logInLink": "Connectez-vous !"
   }
 }
