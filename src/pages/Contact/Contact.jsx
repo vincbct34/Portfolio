@@ -17,11 +17,11 @@ export const Contact = () => {
         navigate('/login');
       }
       });
-  }, [])
+  }, )
 
   return (
     <div>
-      <p>Contact Page</p>
+      <p>EN CONSTRUCTION...</p>
     </div>
   );
 };

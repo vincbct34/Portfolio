@@ -36,7 +36,7 @@ export const Utils = ({ isDark, setIsDark }) => {
       console.log("Signed out successfully");
       window.location.reload();
     }).catch((error) => {
-      console.log("Error logging out");
+      console.log("Error logging out: ", error);
     });
   };
 

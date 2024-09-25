@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebaseConfig';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+import { auth } from '../../firebaseConfig';
+import styles from './Login.module.css';
+import loginImage from './../../assets/images/login.png';
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { t } = useTranslation("global");
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -25,47 +30,47 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <p> FocusApp </p>
+    <div className={styles.mainContainer}>
       <form>
         <div>
           <label htmlFor="email-address">
-            Email address
+            {t("login.emailLabel")}
           </label>
           <input
             id="email-address"
             name="email"
             type="email"
             required
-            placeholder="Email address"
+            placeholder={t("login.placeholderEmail")}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
           <label htmlFor="password">
-            Password
+            {t("login.passwordLabel")}
           </label>
           <input
             id="password"
             name="password"
             type="password"
             required
-            placeholder="Password"
+            placeholder={t("login.passwordPlaceholder")}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div>
           <button onClick={onLogin}>
-            Login
+            {t("login.loginButton")}
           </button>
         </div>
+        <p className={styles.signUp}>
+          {t("login.alreadyHaveAccount")} {' '}
+          <NavLink to="/signup" className={styles.navLink}>
+            {t("login.signUpLink")}
+          </NavLink>
+        </p>
       </form>
-      <p className="text-sm text-white text-center">
-        No account yet? {' '}
-        <NavLink to="/signup">
-          Sign up
-        </NavLink>
-      </p>
+      <img src={loginImage} alt='Illustration' className={styles.imageContainer} />
     </div>
   );
 };

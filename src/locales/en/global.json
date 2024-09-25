@@ -29,5 +29,14 @@
     "signUpButton": "Sign Up",
     "alreadyHaveAccount": "Already have an account?",
     "logInLink": "Log in!"
+  },
+  "login": {
+    "placeholderEmail": "Email Address",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Login",
+    "alreadyHaveAccount": "Don't have an account?",
+    "signUpLink": "Sign Up!"
   }
 }

@@ -17,11 +17,11 @@ export const Projects = () => {
         navigate('/login');
       }
       });
-  }, [])
+  }, )
 
   return (
     <div>
-      <p>Projects Page</p>
+      <p>EN CONSTRUCTION...</p>
     </div>
   );
 };

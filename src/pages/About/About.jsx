@@ -17,11 +17,11 @@ export const About = () => {
         navigate('/login');
       }
       });
-  }, [])
+  }, )
 
   return (
     <div>
-      <p>About Page</p>
+      <p>EN CONSTRUCTION...</p>
     </div>
   );
 };
