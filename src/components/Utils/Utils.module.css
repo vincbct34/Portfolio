@@ -24,8 +24,8 @@
 
 .authentication {
   position: fixed;
-  top: 1vh;
-  right: 3vh;
+  top: 2vh;
+  right: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
