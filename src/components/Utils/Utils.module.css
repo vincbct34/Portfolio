@@ -12,9 +12,9 @@
 }
 
 .language {
-  position: fixed;
-  top: 4vh;
-  left: 4vh;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,9 +23,9 @@
 }
 
 .authentication {
-  position: fixed;
-  top: 4vh;
-  right: 4vh;
+  position: absolute;
+  top: 1vh;
+  right: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
