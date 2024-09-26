@@ -2,8 +2,8 @@
 
 .buttonLink {
   position: fixed;
-  bottom: 4dvh;
-  left: 4dvh;
+  bottom: 4vh;
+  left: 4vh;
   color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
