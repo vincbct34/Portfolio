@@ -1,3 +1,5 @@
+/* This is the CSS file for the Signup page. */
+
 .mainContainer {
   display: flex;
   padding-bottom: 15vh;
@@ -82,8 +84,8 @@ form button:hover {
 .navLink {
   display: flex;
   justify-content: center;
-  height: 8vh;
-  width: 22vh;
+  height: 3vh;
+  width: 10vh;
   font-weight: bold;
   color: var(--text-color);
   text-decoration: none;
@@ -91,7 +93,7 @@ form button:hover {
 }
 
 .navLink:hover {
-  text-shadow: 0 4px 8px var(--shadow-color);
+  text-shadow: 0 1px 4px var(--shadow-color);
   transform: translateY(5px) scale(1.2);
 }
 
@@ -102,7 +104,7 @@ form button:hover {
   }
 
   .imageContainer {
-    height: 20vh;
+    height: 15vh;
     width: auto;
   }
 }

@@ -1,12 +1,26 @@
+/**
+ * @file SocialMedias.jsx is the component that displays the social medias links of the application.
+ * This component is used in the footer of the application to display the different social medias links.
+ * @author Vincent Bichat <vincent260705@gmail.com>
+ */
+
 import { useState } from 'react';
 import classNames from 'classnames';
 import { FaExternalLinkAlt, FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 
+// Importing styles
 import styles from './SocialMedias.module.css';
 
+/**
+ * SocialMedias component renders the social medias links of the application.
+ * 
+ * @returns {JSX.Element} The SocialMedias component.
+ */
 export const SocialMedias = () => {
+  // State to handle the active state of the links
   const [active, setActive] = useState(false);
 
+  // Handle the click on the link button
   const handleLinkClick = () => {
     setActive(!active);
   };

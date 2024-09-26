@@ -1,6 +1,6 @@
 /**
- * @file About.jsx is the component that displays the about page of the application, that requires an account to be accessed.
- * On this page, the user will be able to see my skills, but also what I like to do in my free time.
+ * @file Experience.jsx is the component that displays the experience page of the application, that requires an account to be accessed.
+ * On this page, the user will be able to see the different experiences I had in the developement's world, and what I achieved.
  * @author Vincent Bichat <vincent260705@gmail.com>
  */
 
@@ -12,17 +12,14 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../../firebaseConfig';
 
 // Importing styles
-import styles from './About.module.css';
-
-// Importing components
-import { InfiniteCarousel } from '../../components/InfiniteCarousel/InfiniteCarousel';
+// import styles from './Experience.module.css';
 
 /**
- * About is the component that displays the about page of the application, that requires an account to be accessed.
+ * Experience is the component that displays the experience page of the application, that requires an account to be accessed.
  * 
- * @returns {JSX.Element} The About component.
+ * @returns {JSX.Element} The Experience component.
  */
-export const About = () => {
+export const Experience = () => {
   // Hook to navigate to another page
   const navigate = useNavigate();
 
@@ -41,11 +38,10 @@ export const About = () => {
   }, )
 
   return (
-    <div className={styles.about}>
-      <h1>Mes compétences</h1>
-      <InfiniteCarousel />
+    <div>
+      <p>EN CONSTRUCTION...</p>
     </div>
   );
 };
 
-export default About;
+export default Experience;

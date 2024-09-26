@@ -1,3 +1,5 @@
+/* This is the CSS file for the Home page. */
+
 .Home {
   display: flex;
   padding-bottom: 15vh;
@@ -209,7 +211,7 @@
     height: 4vh;
     font-size: 2vh;
   }
-  
+
   .SecondHomeContainer .Technologies img {
     width: 5vh;
     display: flex;

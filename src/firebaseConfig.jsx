@@ -1,6 +1,12 @@
+/**
+ * @file firebaseConfig.jsx is the configuration file for Firebase, the method used for authentication.
+ * @author Vincent Bichat <vincent260705@gmail.com>
+ */
+
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
+// The web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyARgqsMVWEmwAsjYyfN_2DU-kTbYkSlfwM",
   authDomain: "portfolio-vb34.firebaseapp.com",
@@ -12,4 +18,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);

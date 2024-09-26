@@ -1,0 +1,102 @@
+/* This is the CSS file for the Carousel. */
+
+.container {
+  overflow: hidden;
+  position: relative;
+  height: 15%;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+  animation: fadeInUp 0.6s ease-out forwards;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10vh;
+  height: 10vh;
+  gap: 1vh;
+  position: relative;
+}
+
+.card img {
+  height: 40%;
+  width: 60%;
+  border-radius: 10%;
+  transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+}
+
+.card .title {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--text-color);
+}
+
+.card img:hover + .title,
+.card .title:hover {
+  opacity: 1;
+}
+
+.track {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 200%;
+  height: 10vh;
+  animation: slide 19s linear infinite;
+}
+
+.track.paused {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  }
+
+  .card img {
+    height: 60%;
+    width: 80%;
+  }
+
+  .card img:hover {
+    transform: none;
+  }
+
+  .card .title {
+    display: none;
+  }
+
+  .track.paused {
+    animation-play-state: running;
+  }
+}

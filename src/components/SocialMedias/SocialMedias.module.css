@@ -1,20 +1,25 @@
+/* This is the CSS file for the SocialMedias component. */
+
 .buttonLink {
-  position: absolute;
-  bottom: 2vh;
-  left: 2vh;
+  position: fixed;
+  bottom: 5vh;
+  left: 5vh;
   color: var(--text-color);
   cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
   background-color: var(--background-color);
+  z-index: 1;
 }
 
 .socialLink {
-  position: absolute;
-  bottom: 2vh;
-  left: 2vh;
+  position: fixed;
+  bottom: 5vh;
+  left: 5vh;
   color: var(--text-color);
   height: 16px;
   width: auto;
   transition: transform 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .github {

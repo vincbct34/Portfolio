@@ -1,8 +1,10 @@
+/* This is the CSS file for the ToggleDarkMode component. */
 
 .toggle-container {
-  position: absolute;
-  bottom: 2vh;
-  right: 2vh;
+  position: fixed;
+  bottom: 5vh;
+  right: 5vh;
+  z-index: 1;
 }
 
 .toggle {
@@ -16,7 +18,7 @@
   cursor: pointer;
   color: var(--text-color);
   transition: color 250ms ease-in-out;
-  position: relative; 
+  position: relative;
 }
 
 .toggle + label::before {
