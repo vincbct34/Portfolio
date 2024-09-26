@@ -2,8 +2,8 @@
 
 .buttonLink {
   position: fixed;
-  bottom: 5vh;
-  left: 5vh;
+  bottom: 4dvh;
+  left: 4dvh;
   color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
@@ -13,8 +13,8 @@
 
 .socialLink {
   position: fixed;
-  bottom: 5vh;
-  left: 5vh;
+  bottom: 4vh;
+  left: 4vh;
   color: var(--text-color);
   height: 16px;
   width: auto;

@@ -12,7 +12,7 @@
 }
 
 .language {
-  position: absolute;
+  position: fixed;
   top: 2vh;
   left: 2vh;
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .authentication {
-  position: absolute;
+  position: fixed;
   top: 1vh;
   right: 3vh;
   display: flex;
