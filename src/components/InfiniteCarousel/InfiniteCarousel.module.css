@@ -4,7 +4,7 @@
   overflow: hidden;
   position: relative;
   height: 15%;
-  width: 100%;
+  width: 1000px;
   mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
   animation: fadeInUp 0.6s ease-out forwards;
   z-index: 2;
@@ -80,6 +80,7 @@
 
 @media (max-width: 768px) {
   .container {
+    width: 400px;
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
 

@@ -8,7 +8,7 @@
   "links": {
     "home": "Accueil",
     "about": "À propos",
-    "experience": "Projets"
+    "experience": "Expérience"
   },
   "home": {
     "h1": "Moi c'est Vincent.",
@@ -19,7 +19,7 @@
   },
   "technologies": {
     "vite": "Vite",
-    "brain": "Mon cerveau",
+    "brain": "Firebase",
     "react": "React"
   },
   "signup": {
