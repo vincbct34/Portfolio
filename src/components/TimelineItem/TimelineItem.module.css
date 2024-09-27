@@ -1,0 +1,56 @@
+/* This is the CSS file for the TimelineItem component. */
+
+.timelineItemLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.timelineItemRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.timelineIllustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timelinePoint {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  border: 5px solid var(--text-color);
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+.timelineLine {
+  width: 0.5vh;
+  height: 10vh;
+  background-color: var(--text-color);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+}
+
+.adjustDivs {
+  width: 20vh;
+}

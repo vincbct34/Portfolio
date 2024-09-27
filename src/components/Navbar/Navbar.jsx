@@ -81,7 +81,6 @@ export const Navbar = () => {
   return (
     <div>
       <nav>
-        {}
         <button
           onClick={toggleLinks}
           className={isClicked ? styles.clicked : ''}
@@ -94,7 +93,6 @@ export const Navbar = () => {
           style={{ height: '0px', overflow: 'hidden', transition: 'height 0.5s ease' }}
         >
           <div className={styles.links} ref={linksRef}>
-            {}
             {links.map((link) => {
               const { id, url, text, icon } = link;
               return (
@@ -105,7 +103,6 @@ export const Navbar = () => {
             })}
           </div>
         </div>
-        {}
         <div className={styles.currentPageLogo}>
           {currentPageLogo}
         </div>

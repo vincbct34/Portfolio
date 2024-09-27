@@ -7,12 +7,16 @@
 // import { useNavigate } from 'react-router-dom';
 // import { useEffect } from "react";
 // import { onAuthStateChanged } from "firebase/auth";
+import { useTranslation } from 'react-i18next';
 
 // Importing Firebase configuration
 // import { auth } from '../../firebaseConfig';
 
 // Importing styles
-// import styles from './Experience.module.css';
+import styles from './Experience.module.css';
+
+// Importing components
+import { InfiniteCarousel } from '../../components/InfiniteCarousel/InfiniteCarousel';
 
 /**
  * Experience is the component that displays the experience page of the application, that requires an account to be accessed.
@@ -20,6 +24,9 @@
  * @returns {JSX.Element} The Experience component.
  */
 export const Experience = () => {
+  // Hook to use the translation functions
+  const { t } = useTranslation("global");
+
   // Hook to navigate to another page
   // const navigate = useNavigate();
 
@@ -38,8 +45,8 @@ export const Experience = () => {
   // }, )
 
   return (
-    <div>
-      <p>EN CONSTRUCTION...</p>
+    <div className={styles.experience}>
+      <InfiniteCarousel title={t("about.carousel")} />
     </div>
   );
 };

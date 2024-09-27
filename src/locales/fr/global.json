@@ -39,5 +39,8 @@
     "loginButton": "Se connecter",
     "alreadyHaveAccount": "Pas encore de compte ?",
     "signUpLink": "Inscrivez-vous !"
+  },
+  "about": {
+    "carousel": "Mes compétences"
   }
 }
