@@ -3,7 +3,7 @@
 .toggle-container {
   position: fixed;
   bottom: 2vh;
-  right: 3vh;
+  right: 2vh;
   z-index: 1;
 }
 
