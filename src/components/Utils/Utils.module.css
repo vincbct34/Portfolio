@@ -20,17 +20,24 @@
   align-items: center;
   color: var(--text-color);
   transition: color 0.25s ease-in-out;
+  border: 1px solid var(--text-color);
 }
 
 .authentication {
   position: absolute;
-  top: 1vh;
+  top: 2vh;
   right: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: var(--text-color);
   transition: color 0.25s ease-in-out;
+  border: 1px solid var(--text-color);
+}
+
+.authentication button {
+  padding: 10px;
 }
 
 .language button {
