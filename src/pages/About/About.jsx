@@ -42,8 +42,7 @@ export const About = () => {
 
   return (
     <div className={styles.about}>
-      <h1>Mes compétences</h1>
-      <InfiniteCarousel />
+      <InfiniteCarousel title={"Mes compétences"}/>
     </div>
   );
 };
