@@ -4,12 +4,12 @@
  * @author Vincent Bichat <vincent260705@gmail.com>
  */
 
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+// import { useNavigate } from 'react-router-dom';
+// import { useEffect } from "react";
+// import { onAuthStateChanged } from "firebase/auth";
 
 // Importing Firebase configuration
-import { auth } from '../../firebaseConfig';
+// import { auth } from '../../firebaseConfig';
 
 // Importing styles
 import styles from './About.module.css';
@@ -24,21 +24,21 @@ import { InfiniteCarousel } from '../../components/InfiniteCarousel/InfiniteCaro
  */
 export const About = () => {
   // Hook to navigate to another page
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Check if the user is logged in. If not, redirect to the login page.
-  useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
+  // useEffect(()=>{
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       const uid = user.uid;
 
-        console.log("uid", uid);
-      } else {
-        console.log("user is logged out")
-        navigate('/login');
-      }
-      });
-  }, )
+  //       console.log("uid", uid);
+  //     } else {
+  //       console.log("user is logged out")
+  //       navigate('/login');
+  //     }
+  //     });
+  // }, )
 
   return (
     <div className={styles.about}>
