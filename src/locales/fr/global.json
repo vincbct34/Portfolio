@@ -41,6 +41,34 @@
     "signUpLink": "Inscrivez-vous !"
   },
   "about": {
-    "carousel": "Mes compétences"
+    "carousel": "Mes compétences",
+    "timeline": {
+      "birth": "Ma naissance 👶",
+      "firstSteps": "Mes premiers pas dans l'informatique 🧑‍💻 (13 ans plus tard, rien que ça !)",
+      "helpingMates": "Au lycée, j'aidais mes camarades de classe à préparer leurs examens, notamment scientifiques 📚",
+      "graduation": "J'obtiens mon baccalauréat Maths / Physique - Chimie Mention Bien 🎓",
+      "epitech": "J'entre à EPITECH Montpellier 🚀 Je suis dans l'inconnu total, je n'ai jamais programmé !",
+      "passion": "Je découvre peu à peu ma passion pour la programmation, tout en participant au Promoting de l'école 🌟",
+      "onBoarding": "Je participe à des projets de plus en plus complexes, je participe également au processus d'admission d'EPITECH 🛠️",
+      "webDev": "Je découvre le développement web, là aussi une véritable passion pour moi !",
+      "internship": "Je réalise mon stage de fin de première année chez EPSA Tax, où j'aiguise mes connaissances du Web 🖥️",
+      "newPortfolio": "Je réalise mon nouveau portfolio, qui est celui que vous êtes en train de visiter 🌐 !",
+      "future": "J'ai hâte de découvrir le futur et tous les projets qui m'attendent !"
+    },
+    "timelineDate": {
+      "birth": "26/07/2005",
+      "firstSteps": "2018 ~ 2019",
+      "helpingMates": "2019 -> 2022",
+      "graduation": "Début 2022",
+      "epitech": "Octobre 2022",
+      "passion": "2023",
+      "onBoarding": "Milieu 2023",
+      "webDev": "Début 2024",
+      "internship": "Juillet 2024",
+      "newPortfolio": "Fin 2024",
+      "future": "2025 vers l'infini et au-delà !"
+    },
+    "descriptionTitle": "À propos de moi",
+    "description": "Je suis un développeur passionné qui a découvert le code un peu tard, mais qui est rapidement tombé sous le charme. De mes premiers pas dans l'informatique en tant qu'adolescent à mon entrée dans l'inconnu à EPITECH Montpellier, j'ai beaucoup évolué grâce au travail acharné et à la persévérance. J'adore le développement web et j'ai déjà réalisé des projets passionnants. Quand je ne code pas, j'aime aider les autres et relever de nouveaux défis. Ce portfolio n'est que le début, je suis impatient de voir ce que l'avenir me réserve !"
   }
 }

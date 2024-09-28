@@ -1,7 +1,7 @@
 /**
  * @file About.jsx is the component that displays the about page of the application, that requires an account to be accessed.
  * On this page, the user will be able to see my skills, but also what I like to do in my free time.
- * @author Vincent Bichat <vincent260705@gmail.com>
+ * @autor Vincent Bichat <vincent260705@gmail.com>
  */
 
 import { useTranslation } from 'react-i18next';
@@ -17,16 +17,17 @@ import styles from './About.module.css';
 
 // Importing images
 import { TbCalendarTime } from "react-icons/tb";
-import teatPng from './../../assets/images/teat.png';
-import stepPng from './../../assets/images/firststep.png';
-import homeworkPng from './../../assets/images/homework.png';
-import degreePng from './../../assets/images/degree.png';
-import informaticPng from './../../assets/images/informatic.png';
-import studentPng from './../../assets/images/student.png';
-import admissionsPng from './../../assets/images/admissions.png';
-import webPng from './../../assets/images/web.png';
-import internshipPng from './../../assets/images/internship.png';
-import portfolioPng from './../../assets/images/portfolio.png';
+import { FaBaby } from "react-icons/fa";
+import { IoFootstepsOutline } from "react-icons/io5";
+import { MdHomeWork } from "react-icons/md";
+import { GiDiploma } from "react-icons/gi";
+import { FaComputer } from "react-icons/fa6";
+import { PiStudentFill } from "react-icons/pi";
+import { GrUserAdmin } from "react-icons/gr";
+import { SiWebmoney } from "react-icons/si";
+import { MdOutlineWork, MdWeb } from "react-icons/md";
+import { ImRocket } from "react-icons/im";
+import aboutLogo from '../../assets/images/aboutIllustration.svg';
 
 // Importing components
 import { TimelineItem } from '../../components/TimelineItem/TimelineItem';
@@ -65,20 +66,22 @@ export const About = () => {
             <TbCalendarTime size={40} />
           </div>
           <div className={styles.timeline}>
-            <TimelineItem side={"left"} date={"26/07/2005"} text={t("about.timeline.birth")} img={teatPng} imgAlt={"Teat"} />
-            <TimelineItem side={"right"} date={"2018 ~ 2019"} text={t("about.timeline.firstSteps")} img={stepPng} imgAlt={"First Steps"} />
-            <TimelineItem side={"left"} date={"2019 -> 2022"} text={t("about.timeline.helpingMates")} img={homeworkPng} imgAlt={"Homework"} />
-            <TimelineItem side={"right"} date={"Début 2022"} text={t("about.timeline.graduation")} img={degreePng} imgAlt={"Degree"} />
-            <TimelineItem side={"left"} date={"Octobre 2022"} text={t("about.timeline.epitech")} img={informaticPng} imgAlt={"Informatic"} />
-            <TimelineItem side={"right"} date={"2023"} text={t("about.timeline.passion")} img={studentPng} imgAlt={"Student"} />
-            <TimelineItem side={"left"} date={"Milieu 2023"} text={t("about.timeline.onBoarding")} img={admissionsPng} imgAlt={"Admissions"} />
-            <TimelineItem side={"right"} date={"Début 2024"} text={t("about.timeline.webDev")} img={webPng} imgAlt={"Web Development"} />
-            <TimelineItem side={"left"} date={"Juillet 2024"} text={t("about.timeline.internship")} img={internshipPng} imgAlt={"Internship"} />
-            <TimelineItem side={"right"} date={"Fin 2024"} text={t("about.timeline.newPortfolio")} img={portfolioPng} imgAlt={"Portfolio"} />
+            <TimelineItem side={"left"} date={t("about.timelineDate.birth")} text={t("about.timeline.birth")} logo={<FaBaby size={25} />} logoAlt={"Baby"} />
+            <TimelineItem side={"right"} date={t("about.timelineDate.firstSteps")} text={t("about.timeline.firstSteps")} logo={<IoFootstepsOutline size={25} />} logoAlt={"First Steps"} />
+            <TimelineItem side={"left"} date={t("about.timelineDate.helpingMates")} text={t("about.timeline.helpingMates")} logo={<MdHomeWork size={25} />} logoAlt={"Homework"} />
+            <TimelineItem side={"right"} date={t("about.timelineDate.graduation")} text={t("about.timeline.graduation")} logo={<GiDiploma size={25} />} logoAlt={"Degree"} />
+            <TimelineItem side={"left"} date={t("about.timelineDate.epitech")} text={t("about.timeline.epitech")} logo={<FaComputer size={25} />} logoAlt={"Informatic"} />
+            <TimelineItem side={"right"} date={t("about.timelineDate.passion")} text={t("about.timeline.passion")} logo={<PiStudentFill size={25} />} logoAlt={"Student"} />
+            <TimelineItem side={"left"} date={t("about.timelineDate.onBoarding")} text={t("about.timeline.onBoarding")} logo={<GrUserAdmin size={25} />} logoAlt={"Admissions"} />
+            <TimelineItem side={"right"} date={t("about.timelineDate.webDev")} text={t("about.timeline.webDev")} logo={<MdWeb size={25} />} logoAlt={"Web Development"} />
+            <TimelineItem side={"left"} date={t("about.timelineDate.internship")} text={t("about.timeline.internship")} logo={<MdOutlineWork size={25} />} logoAlt={"Internship"} />
+            <TimelineItem side={"right"} date={t("about.timelineDate.newPortfolio")} text={t("about.timeline.newPortfolio")} logo={<SiWebmoney size={25} />} logoAlt={"Portfolio"} />
+            <TimelineItem side={"last"} date={t("about.timelineDate.future")} text={t("about.timeline.future")} logo={<ImRocket size={25} />} logoAlt={"Future"} />
           </div>
         </div>
         <div className={styles.description}>
-          <h2>{t("about.descriptionTitle")}</h2>
+          <h2>{t("about.descriptionTitle")}<span>💡</span></h2>
+          <img src={aboutLogo} alt="About" />
           <p>{t("about.description")}</p>
         </div>
       </div>

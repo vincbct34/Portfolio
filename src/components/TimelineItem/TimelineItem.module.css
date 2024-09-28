@@ -1,20 +1,22 @@
 /* This is the CSS file for the TimelineItem component. */
 
-.timelineItemLeft {
+.timelineItem {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2vh;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-.timelineItemRight {
+.timelineItem {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2vh;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
@@ -28,6 +30,9 @@
 }
 
 .timelinePoint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
@@ -43,14 +48,20 @@
   transition: background-color 0.25s ease-in-out;
 }
 
+.timelineLastLine {
+  width: 0.5vh;
+  border-left: 2px dashed var(--text-color);
+  height: 10vh;
+}
+
 .timelineContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20vh;
+  width: 30vh;
 }
 
 .adjustDivs {
-  width: 20vh;
+  width: 30vh;
 }
