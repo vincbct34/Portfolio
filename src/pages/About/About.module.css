@@ -12,6 +12,14 @@
   cursor: default;
   z-index: 0;
   overflow: hidden;
+}
+
+.About .timelineContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
@@ -24,14 +32,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.About .timelineContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10vh;
 }
 
 .About .leftTimeline {
