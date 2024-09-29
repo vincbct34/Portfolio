@@ -42,7 +42,7 @@
   "about": {
     "carousel": "My skills",
     "timeline": {
-      "birth": "My birth 👶",
+      "birth": "I'm born in Aix-en-Provence, in France 👶",
       "firstSteps": "First Steps in IT 🧑‍💻 (13 years later, just that!)",
       "helpingMates": "In high school, I helped my classmates prepare for their exams, especially in science 📚",
       "graduation": "I obtained my high school diploma in Maths / Physics - Chemistry with honors 🎓",
@@ -68,6 +68,12 @@
       "future": "2025 to the infinity, and beyond!"
     },
     "descriptionTitle": "About Me",
-    "description": "I'm a passionate developer who discovered coding a little late in life but quickly fell in love with it. From my first steps in IT as a teenager to diving into the unknown at EPITECH Montpellier, I’ve grown a lot through hard work and perseverance. I enjoy web development and have already tackled some pretty exciting projects. When I’m not coding, I like helping others and pushing my limits. This portfolio is just the beginning, I'm excited for what the future holds!"
+    "description": " who discovered coding a little late in life but quickly fell in love with it. From my first steps in IT as a teenager to diving into the unknown at EPITECH Montpellier, I’ve grown a lot through hard work and perseverance. I enjoy web development and have already tackled some pretty exciting projects. When I’m not coding, I like helping others and pushing my limits. This portfolio is just the beginning, I'm excited for what the future holds!",
+    "descriptionFirstLetter": "I",
+    "descriptionBold": "'m a passionate developer",
+    "download": {
+      "title": "Some documents to download 📥",
+      "cv": "Download my CV"
+    }
   }
 }

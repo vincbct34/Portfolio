@@ -65,3 +65,17 @@
 .adjustDivs {
   width: 30vh;
 }
+
+@media (max-width: 768px) {
+  .timelineContent {
+    width: 60%;
+  }
+
+  .adjustDivs {
+    width: 60%;
+  }
+
+  .timelineLine {
+    height: 17vh;
+  }
+}

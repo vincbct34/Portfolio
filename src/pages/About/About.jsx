@@ -6,7 +6,6 @@
 
 import { useTranslation } from 'react-i18next';
 // import { useNavigate } from 'react-router-dom';
-// import { useEffect } from "react";
 // import { onAuthStateChanged } from "firebase/auth";
 
 // Importing Firebase configuration
@@ -28,9 +27,13 @@ import { SiWebmoney } from "react-icons/si";
 import { MdOutlineWork, MdWeb } from "react-icons/md";
 import { ImRocket } from "react-icons/im";
 import aboutLogo from '../../assets/images/aboutIllustration.svg';
+import CVPreview from '../../assets/images/cvPreview.png';
 
 // Importing components
 import { TimelineItem } from '../../components/TimelineItem/TimelineItem';
+
+// Importing PDF file
+import cvPdf from '../../assets/files/Cv.pdf';
 
 /**
  * About is the component that displays the about page of the application, that requires an account to be accessed.
@@ -58,6 +61,11 @@ export const About = () => {
   //     });
   // }, )
 
+  // Function to handle the change of the page
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  }
+
   return (
     <div className={styles.about}>
       <div className={styles.timelineContainer}>
@@ -82,7 +90,14 @@ export const About = () => {
         <div className={styles.description}>
           <h2>{t("about.descriptionTitle")}<span>💡</span></h2>
           <img src={aboutLogo} alt="About" />
-          <p>{t("about.description")}</p>
+          <p><span style={{fontSize: '5em'}}>{t("about.descriptionFirstLetter")}</span><span style={{fontWeight: '900', fontSize: '1.5em'}}>{t("about.descriptionBold")}</span>{t("about.description")}</p>
+          <h3>{t("about.download.title")}</h3>
+          <div className={styles.download}>
+            <img src={CVPreview} alt="CV" />
+            <a href={cvPdf} download>
+              <button className={styles.downloadButton}>{t("about.download.cv")}</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@
   "about": {
     "carousel": "Mes compétences",
     "timeline": {
-      "birth": "Ma naissance 👶",
+      "birth": "Je suis né à Aix-en-Provence, en France 👶",
       "firstSteps": "Mes premiers pas dans l'informatique 🧑‍💻 (13 ans plus tard, rien que ça !)",
       "helpingMates": "Au lycée, j'aidais mes camarades de classe à préparer leurs examens, notamment scientifiques 📚",
       "graduation": "J'obtiens mon baccalauréat Maths / Physique - Chimie Mention Bien 🎓",
@@ -56,7 +56,7 @@
       "future": "J'ai hâte de découvrir le futur et tous les projets qui m'attendent !"
     },
     "timelineDate": {
-      "birth": "26/07/2005",
+      "birth": "26/07/05",
       "firstSteps": "2018 ~ 2019",
       "helpingMates": "2019 -> 2022",
       "graduation": "Début 2022",
@@ -69,6 +69,12 @@
       "future": "2025 vers l'infini et au-delà !"
     },
     "descriptionTitle": "À propos de moi",
-    "description": "Je suis un développeur passionné qui a découvert le code un peu tard, mais qui est rapidement tombé sous le charme. De mes premiers pas dans l'informatique en tant qu'adolescent à mon entrée dans l'inconnu à EPITECH Montpellier, j'ai beaucoup évolué grâce au travail acharné et à la persévérance. J'adore le développement web et j'ai déjà réalisé des projets passionnants. Quand je ne code pas, j'aime aider les autres et relever de nouveaux défis. Ce portfolio n'est que le début, je suis impatient de voir ce que l'avenir me réserve !"
+    "description": " qui a découvert le code un peu tard, mais qui est rapidement tombé sous le charme. De mes premiers pas dans l'informatique en tant qu'adolescent à mon entrée dans l'inconnu à EPITECH Montpellier, j'ai beaucoup évolué grâce au travail acharné et à la persévérance. J'adore le développement web et j'ai déjà réalisé des projets passionnants. Quand je ne code pas, j'aime aider les autres et relever de nouveaux défis. Ce portfolio n'est que le début, je suis impatient de voir ce que l'avenir me réserve !",
+    "descriptionFirstLetter": "J",
+    "descriptionBold": "e suis un développeur passionné",
+    "download": {
+      "title": "Quelques documents à télécharger 📥",
+      "cv": "Téléchargez mon CV"
+    }
   }
 }

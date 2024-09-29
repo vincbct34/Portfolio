@@ -4,6 +4,8 @@
   position: fixed;
   bottom: 2vh;
   left: 2vh;
+  height: 17px;
+  width: auto;
   color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;

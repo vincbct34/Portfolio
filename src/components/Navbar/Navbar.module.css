@@ -35,6 +35,7 @@ button.clicked {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 1vh;
 }
 
 .links a {
@@ -91,8 +92,16 @@ button.clicked {
     display: none;
   }
 
+  .links {
+    gap: 0;
+  }
+
   .links a {
-    padding: 2vh 2vh;
+    padding: 2vh 1vh;
+  }
+
+  .links a:hover {
+    transform: none;
   }
 
   .links a:hover .icon {
