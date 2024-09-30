@@ -50,7 +50,7 @@ export const SocialMedias = () => {
         <FaFacebook alt="Facebook" />
       </a>
       <a 
-        href="https://linkedin.com/in/your-profile" 
+        href="https://linkedin.com/in/vincent-bichat" 
         target="_blank" 
         rel="noopener noreferrer" 
         className={classNames(

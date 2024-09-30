@@ -1,5 +1,9 @@
 /* This is the CSS applied to the whole application */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Panton";
   src: local("Panton"), url("./../fonts/Panton.otf") format("truetype");
