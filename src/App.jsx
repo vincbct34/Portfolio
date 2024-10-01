@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
 // Importing pages
-import Home from "./pages/Home/Home.jsx";
+import Home from "./pages/Home.jsx";
 import About from "./pages/About/About.jsx";
 import Experience from "./pages/Experience/Experience.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
@@ -30,7 +30,7 @@ export const App = () => {
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
-    <div data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
+    <div class="w-full h-full bg-[var(--background-color)] text-color transition-colors duration-500 ease-in-out" data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
       <Router>
         <Utils isDark={isDark} setIsDark={setIsDark} />
         <Routes>
