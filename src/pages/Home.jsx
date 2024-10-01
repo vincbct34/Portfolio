@@ -36,7 +36,7 @@ const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
         <img src={logoSrc} alt={altText} />
       </div>
     )}
-    <p class="mt-10 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-5">{text}</p>
+    <p class="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
   </div>
 );
 
@@ -58,7 +58,7 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div class="flex flex-col h-[100vh] justify-center items-center pt-35 cursor-default">
+    <div class="flex flex-col h-[100vh] justify-center items-center pt-40 cursor-default md:pt-35">
       <div class="flex flex-col justify-center items-center md:flex-row">
         <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:text-left md:items-start">
           <h2 class="text-4xl animate-fadeInUpText">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
