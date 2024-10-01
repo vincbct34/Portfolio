@@ -26,17 +26,17 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  * @returns {JSX.Element} The TechItem component.
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
-  <div class="flex flex-col w-1/4 h-1/3 justify-center items-center text-center mt-20 group md:mt-30">
+  <div class="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
     {customWrapper ? (
-      <div class="flex justify-center items-center w-2/3 transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
+      <div class="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
       </div>
     ) : (
-      <div class="flex justify-center items-center w-2/3 transition duration-300 ease-in-out hover:drop-shadow-custom">
+      <div class="flex justify-center items-center transition duration-300 ease-in-out hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
       </div>
     )}
-    <p class="mt-10 opacity-0 transition duration-300 group-hover:opacity-100 group-hover:-translate-y-10">{text}</p>
+    <p class="mt-10 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-5">{text}</p>
   </div>
 );
 
@@ -58,21 +58,21 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div class="flex flex-col w-full h-screen justify-center items-center pt-20 cursor-default md:pt-0">
-      <div class="flex flex-col w-full h-1/2 justify-center items-center md:flex-row">
-        <div class="flex flex-col w-1/2 h-full justify-center items-center text-center gap-0 animate-fadeInUpText md:text-left md:items-start">
+    <div class="flex flex-col h-[100vh] justify-center items-center pt-40 cursor-default">
+      <div class="flex flex-col justify-center items-center md:flex-row">
+        <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:text-left md:items-start">
           <h2 class="text-4xl animate-fadeInUpText">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
-          <h1 class="w-[85vw] text-5xl font-bold m-5 md:w-[60%] md:ml-0 animate-fadeInUpText">{t("home.h1")}</h1>
-          <h3 class="w-[85vw] text-xl animate-fadeInUpText md:w-3/4">{t("home.h3")}</h3>
+          <h2 class="text-5xl font-bold animate-fadeInUpText m-5 md:ml-0">{t("home.h1")}</h2>
+          <h3 class="text-xl animate-fadeInUpText pb-10 md:w-3/4">{t("home.h3")}</h3>
         </div>
-        <div class="flex w-[45vw] h-[40vh] rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp md:h-[25vh] md:w-[25vh]">
-          <img src={profileImage} alt="Profile Picture" class="w-full h-full object-cover translate-x-1 md:translate-y-3"/>
+        <div class="flex w-1/4 rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp mb-10">
+          <img src={profileImage} alt="Profile Picture" class="object-cover translate-x-3"/>
         </div>
       </div>
-      <div class="flex flex-col h-[30vh] justify-center items-center text-center">
-        <h1 class="w-[95vw] text-2xl font-bold m-5 animate-fadeInUpText md:text-5xl">{t("home.welcome")}</h1>
-        <h2 class="text-xl animate-fadeInUpText md:text-4xl md:pb-20">{t("home.technologiesTitle")}</h2>
-        <div class="flex w-full h-[40%] justify-center items-center gap-3 animate-fadeInUp">
+      <div class="flex flex-col justify-center items-center text-center">
+        <h1 class="text-2xl font-bold animate-fadeInUpText">{t("home.welcome")}</h1>
+        <h2 class="text-xl animate-fadeInUpText">{t("home.technologiesTitle")}</h2>
+        <div class="flex w-3/4 justify-center items-center animate-fadeInUp pt-10">
           <TechItem logoSrc={reactLogo} altText={t("technologies.react")} text={t("technologies.react")} customWrapper />
           <TechItem logoSrc={tailwindLogo} altText="Tailwind CSS Logo" text="Tailwind" />
           <TechItem logoSrc={firebaseLogo} altText="Firebase Logo" text='Firebase' />

@@ -30,9 +30,8 @@ export const App = () => {
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
-    <div class="w-full h-full bg-[var(--background-color)] text-color transition-colors duration-500 ease-in-out" data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
+    <div class="bg-[var(--background-color)] text-color transition-colors duration-500 ease-in-out" data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
       <Router>
-        <Utils isDark={isDark} setIsDark={setIsDark} />
         <Routes>
           {/* All the pages in the application. */}
           <Route path="/" element={<Home />} />
