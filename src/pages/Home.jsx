@@ -26,7 +26,7 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  * @returns {JSX.Element} The TechItem component.
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
-  <div class="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
+  <div class="flex flex-col w-[25vw] justify-center items-center text-center pb-10 group md:w-[15vw]">
     {customWrapper ? (
       <div class="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
