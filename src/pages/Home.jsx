@@ -26,7 +26,7 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  * @returns {JSX.Element} The TechItem component.
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
-  <div class="flex flex-col w-[25vw] justify-center items-center text-center pb-10 group md:w-[15vw]">
+  <div class="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
     {customWrapper ? (
       <div class="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
@@ -58,7 +58,7 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div class="flex flex-col h-[100vh] justify-center items-center pt-40 cursor-default md:pt-35">
+    <div class="flex flex-col h-[105vh] justify-center items-center pt-40 cursor-default md:pt-35">
       <div class="flex flex-col justify-center items-center md:flex-row">
         <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:text-left md:items-start">
           <h2 class="text-4xl animate-fadeInUpText">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
