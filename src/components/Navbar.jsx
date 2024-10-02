@@ -97,7 +97,7 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed flex flex-col items-center text-center left-1/2 -translate-x-1/2 top-25 md:gap-10">
+      <nav className="fixed flex flex-col items-center text-center left-1/2 -translate-x-1/2 top-24 md:gap-10">
         <div className="hidden flex-col justify-center items-center md:flex">
           {currentPageLogo}
         </div>
