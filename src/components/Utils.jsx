@@ -18,9 +18,9 @@ import usFlag from './../assets/images/us-flag.png';
 import frFlag from './../assets/images/france-flag.png';
 
 // Importing components
-import { ToggleDarkMode } from "./ToggleDarkMode/ToggleDarkMode";
-import { Navbar } from "./Navbar/Navbar";
-import { SocialMedias } from "./SocialMedias/SocialMedias";
+import { ToggleDarkMode } from "./ToggleDarkMode";
+import { Navbar } from "./Navbar";
+import { SocialMedias } from "./SocialMedias";
 
 /**
  * Utils component to display the utility bar of the application.
@@ -72,7 +72,7 @@ export const Utils = ({ isDark, setIsDark }) => {
 
   return (
     <>
-      <div class="absolute flex left-5 top-5">
+      <div class="fixed flex left-5 top-5">
         <div class="flex w-[51%] justify-center items-center text-center md:w-[60%]">
           <p class="text-">{t("languageSettings.chooseLanguage")}</p>
           <button
@@ -95,7 +95,7 @@ export const Utils = ({ isDark, setIsDark }) => {
           </button>
         </div>
       </div>
-      <div class="absolute flex justify-center items-center right-6 top-8 w-[20%]">
+      <div class="fixed flex justify-center items-center right-6 top-8 w-[20%]">
         {isUserLoggedIn ? (
           <button onClick={handleLogout} class="">
             Logout
@@ -106,25 +106,13 @@ export const Utils = ({ isDark, setIsDark }) => {
           </button>
         )}
       </div>
+      <Navbar />
+      <ToggleDarkMode
+        isChecked={isDark}
+        handleChange={() => setIsDark(prev => !prev)}
+      />
+      <SocialMedias />
     </>
-    //   <div class="flex h-20 w-1/4 right-0">
-    //   {isUserLoggedIn ? (
-    //       <button onClick={handleLogout}>
-    //         Logout
-    //       </button>
-    //     ) : (
-    //       <button onClick={handleSignIn}>
-    //         Sign In
-    //       </button>
-    //     )}
-    //   </div>
-    //   {/* <Navbar />
-    //   <ToggleDarkMode
-    //     isChecked={isDark}
-    //     handleChange={() => setIsDark(prev => !prev)}
-    //   />
-    //   <SocialMedias /> */}
-    // </div>
   );
 };
 

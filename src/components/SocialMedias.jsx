@@ -1,18 +1,13 @@
 /**
- * @file SocialMedias.jsx is the component that displays the social medias links of the application.
- * This component is used in the footer of the application to display the different social medias links.
- * @author Vincent Bichat <vincent260705@gmail.com>
+ * @file SocialMedias.jsx is the component that displays the social media links of the application.
+ * This component is used in the footer of the application to display the different social media links.
  */
 
 import { useState } from 'react';
-import classNames from 'classnames';
 import { FaExternalLinkAlt, FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-// Importing styles
-import styles from './SocialMedias.module.css';
-
 /**
- * SocialMedias component renders the social medias links of the application.
+ * SocialMedias component renders the social media links of the application.
  * 
  * @returns {JSX.Element} The SocialMedias component.
  */
@@ -26,15 +21,12 @@ export const SocialMedias = () => {
   };
 
   return (
-    <div>
+    <div className="fixed bottom-5 left-5 flex flex-col items-center">
       <a 
         href="https://github.com/your-profile" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={classNames(
-          styles.socialLink,
-          active && styles.github
-        )}
+        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-12 scale-150" : ""}`}
       >
         <FaGithub alt="Github" />
       </a>
@@ -42,10 +34,7 @@ export const SocialMedias = () => {
         href="https://facebook.com/your-profile" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={classNames(
-          styles.socialLink,
-          active && styles.facebook
-        )}
+        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "-translate-y-12 scale-150" : ""}`}
       >
         <FaFacebook alt="Facebook" />
       </a>
@@ -53,15 +42,12 @@ export const SocialMedias = () => {
         href="https://linkedin.com/in/vincent-bichat" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={classNames(
-          styles.socialLink,
-          active && styles.linkedin
-        )}
+        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-9 -translate-y-9 scale-150" : ""}`}
       >
         <FaLinkedin alt="LinkedIn" />
       </a>
       <FaExternalLinkAlt 
-        className={styles.buttonLink} 
+        className="cursor-pointer bg-[var(--background-color)] text-current transition-transform duration-300 ease-in-out z-20" 
         alt="Links" 
         onClick={handleLinkClick} 
       />
