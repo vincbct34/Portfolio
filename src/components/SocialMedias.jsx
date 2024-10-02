@@ -23,7 +23,7 @@ export const SocialMedias = () => {
   return (
     <div className="fixed bottom-5 left-5 flex flex-col items-center z-20">
       <a 
-        href="https://github.com/your-profile" 
+        href="https://github.com/vincbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
         className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-12 scale-150" : ""}`}
@@ -31,7 +31,7 @@ export const SocialMedias = () => {
         <FaGithub alt="Github" />
       </a>
       <a 
-        href="https://facebook.com/your-profile" 
+        href="https://facebook.com/vincentbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
         className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "-translate-y-12 scale-150" : ""}`}
