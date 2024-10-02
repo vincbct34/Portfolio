@@ -26,7 +26,7 @@ export const SocialMedias = () => {
         href="https://github.com/your-profile" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-12 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-12 scale-150" : ""}`}
       >
         <FaGithub alt="Github" />
       </a>
@@ -34,7 +34,7 @@ export const SocialMedias = () => {
         href="https://facebook.com/your-profile" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "-translate-y-12 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "-translate-y-12 scale-150" : ""}`}
       >
         <FaFacebook alt="Facebook" />
       </a>
@@ -42,7 +42,7 @@ export const SocialMedias = () => {
         href="https://linkedin.com/in/vincent-bichat" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-9 -translate-y-9 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-9 -translate-y-9 scale-150" : ""}`}
       >
         <FaLinkedin alt="LinkedIn" />
       </a>
