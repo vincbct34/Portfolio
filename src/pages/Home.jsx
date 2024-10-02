@@ -58,7 +58,7 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div className="flex flex-col h-[105vh] justify-center items-center pt-40 cursor-default md:pt-35">
+    <div className="flex flex-col h-[110vh] justify-center items-center pt-40 cursor-default md:pt-35">
       <div className="flex flex-col justify-center items-center md:flex-row">
         <div className="flex flex-col justify-center items-center text-center animate-fadeInUpText md:w-1/2 md:text-left md:items-start">
           <h2 className="text-4xl">{t("home.h2")} <span className="inline-block hover:animate-wave">👋</span></h2>
