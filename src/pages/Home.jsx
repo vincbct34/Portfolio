@@ -60,13 +60,13 @@ export const Home = () => {
   return (
     <div class="flex flex-col h-[105vh] justify-center items-center pt-40 cursor-default md:pt-35">
       <div class="flex flex-col justify-center items-center md:flex-row">
-        <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:text-left md:items-start">
-          <h2 class="text-4xl animate-fadeInUpText">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
-          <h2 class="text-5xl font-bold animate-fadeInUpText m-5 md:ml-0">{t("home.h1")}</h2>
-          <h3 class="text-xl animate-fadeInUpText pb-10 md:w-3/4">{t("home.h3")}</h3>
+        <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:w-1/2 md:text-left md:items-start">
+          <h2 class="text-4xl">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
+          <h2 class="text-5xl font-bold m-5 md:ml-0">{t("home.h1")}</h2>
+          <h3 class="text-xl pb-10 md:w-3/4">{t("home.h3")}</h3>
         </div>
         <div class="flex w-1/4 rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp mb-10">
-          <img src={profileImage} alt="Profile Picture" class="object-cover translate-x-3"/>
+          <img src={profileImage} alt="Profile Picture" class="object-cover translate-x-1.5 md:translate-x-3"/>
         </div>
       </div>
       <div class="flex flex-col justify-center items-center text-center">

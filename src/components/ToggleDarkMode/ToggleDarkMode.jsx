@@ -23,7 +23,7 @@ export const ToggleDarkMode = ({ handleChange, isChecked }) => {
   const { t } = useTranslation("global");
 
   return (
-    <div className={styles.toggleContainer}>
+    <div class="">
       <input
         type="checkbox"
         id="check"

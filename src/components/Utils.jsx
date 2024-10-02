@@ -11,19 +11,16 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 
 // Importing Firebase configuration
-import { auth } from '../../firebaseConfig';
-
-// Importing styles
-import styles from './Utils.module.css';
+import { auth } from '../firebaseConfig';
 
 // Importing images
-import usFlag from './../../assets/images/us-flag.png';
-import frFlag from './../../assets/images/france-flag.png';
+import usFlag from './../assets/images/us-flag.png';
+import frFlag from './../assets/images/france-flag.png';
 
 // Importing components
-import { ToggleDarkMode } from "../ToggleDarkMode/ToggleDarkMode";
-import { Navbar } from "../Navbar/Navbar";
-import { SocialMedias } from "../SocialMedias/SocialMedias";
+import { ToggleDarkMode } from "./ToggleDarkMode/ToggleDarkMode";
+import { Navbar } from "./Navbar/Navbar";
+import { SocialMedias } from "./SocialMedias/SocialMedias";
 
 /**
  * Utils component to display the utility bar of the application.
@@ -74,34 +71,33 @@ export const Utils = ({ isDark, setIsDark }) => {
   };
 
   return (
-    <div className={styles.utilsContainer}>
-      <div className={styles.language}>
-        {t("languageSettings.chooseLanguage")}
-        <button
-          onClick={() => handleLanguageChange("en")}
-          style={{
-            filter: languageSelected === "en" ? "none" : "grayscale(100%)"
-          }}
-        >
-          <img src={usFlag} alt="English" />
-        </button>
-        <button
-          onClick={() => handleLanguageChange("fr")}
-          style={{
-            filter: languageSelected === "fr" ? "none" : "grayscale(100%)"
-          }}
-        >
-          <img src={frFlag} alt="French" />
-        </button>
+    <>
+      <div class="absolute flex left-5 top-5">
+        <div class="flex w-[51%] justify-center items-center text-center md:w-[60%]">
+          <p class="text-">{t("languageSettings.chooseLanguage")}</p>
+          <button
+            onClick={() => handleLanguageChange("en")}
+            style={{
+              filter: languageSelected === "en" ? "none" : "grayscale(100%)",
+            }}
+            class="flex w-1/4 justify-center items-center"
+          >
+            <img src={usFlag} alt="English" class="w-1/2 transition duration-300 ease-in-out hover:scale-110"/>
+          </button>
+          <button
+            onClick={() => handleLanguageChange("fr")}
+            style={{
+              filter: languageSelected === "fr" ? "none" : "grayscale(100%)"
+            }}
+            class="flex w-1/4 justify-center items-center"
+          >
+            <img src={frFlag} alt="French" class="w-1/2 transition duration-300 ease-in-out hover:scale-110"/>
+          </button>
+        </div>
       </div>
-      <ToggleDarkMode
-        isChecked={isDark}
-        handleChange={() => setIsDark(prev => !prev)}
-      />
-      <Navbar />
-      <div className={styles.authentication}>
+      <div class="absolute flex justify-center items-center right-6 top-8 w-[20%]">
         {isUserLoggedIn ? (
-          <button onClick={handleLogout}>
+          <button onClick={handleLogout} class="">
             Logout
           </button>
         ) : (
@@ -110,8 +106,25 @@ export const Utils = ({ isDark, setIsDark }) => {
           </button>
         )}
       </div>
-      <SocialMedias />
-    </div>
+    </>
+    //   <div class="flex h-20 w-1/4 right-0">
+    //   {isUserLoggedIn ? (
+    //       <button onClick={handleLogout}>
+    //         Logout
+    //       </button>
+    //     ) : (
+    //       <button onClick={handleSignIn}>
+    //         Sign In
+    //       </button>
+    //     )}
+    //   </div>
+    //   {/* <Navbar />
+    //   <ToggleDarkMode
+    //     isChecked={isDark}
+    //     handleChange={() => setIsDark(prev => !prev)}
+    //   />
+    //   <SocialMedias /> */}
+    // </div>
   );
 };
 

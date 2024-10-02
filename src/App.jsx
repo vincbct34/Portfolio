@@ -15,7 +15,7 @@ import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 
 // Importing components
-import { Utils } from "./components/Utils/Utils.jsx";
+import { Utils } from "./components/Utils.jsx";
 
 /**
  * The main component of the application.
@@ -30,8 +30,9 @@ export const App = () => {
   const [isDark, setIsDark] = useLocalStorage("isDark", preference);
 
   return (
-    <div class="bg-[var(--background-color)] text-color transition-colors duration-500 ease-in-out" data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
+    <div class="bg-[var(--background-color)] text-color overflow-hidden transition-colors duration-500 ease-in-out" data-theme={isDark ? "dark" : "light"}> {/* Adapt the app to the theme chosen. */}
       <Router>
+        <Utils isDark={isDark} setIsDark={setIsDark} />
         <Routes>
           {/* All the pages in the application. */}
           <Route path="/" element={<Home />} />
