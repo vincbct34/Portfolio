@@ -47,7 +47,7 @@ export const SocialMedias = () => {
         <FaLinkedin alt="LinkedIn" />
       </a>
       <FaExternalLinkAlt 
-        className="cursor-pointer bg-[var(--background-color)] text-current transition-transform duration-300 ease-in-out z-20" 
+        className="fixed bottom-5 left-5 cursor-pointer bg-[var(--background-color)] text-current transition-transform duration-300 ease-in-out z-20" 
         alt="Links" 
         onClick={handleLinkClick} 
       />
