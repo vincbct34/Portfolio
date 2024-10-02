@@ -27,6 +27,7 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
   <div className="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
+    <p className="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
     {customWrapper ? (
       <div className="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
@@ -36,7 +37,6 @@ const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
         <img src={logoSrc} alt={altText} />
       </div>
     )}
-    <p className="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
   </div>
 );
 
