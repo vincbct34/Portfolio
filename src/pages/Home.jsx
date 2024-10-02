@@ -26,17 +26,17 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  * @returns {JSX.Element} The TechItem component.
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
-  <div class="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
+  <div className="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
     {customWrapper ? (
-      <div class="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
+      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
       </div>
     ) : (
-      <div class="flex justify-center items-center transition duration-300 ease-in-out hover:drop-shadow-custom">
+      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:drop-shadow-custom">
         <img src={logoSrc} alt={altText} />
       </div>
     )}
-    <p class="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
+    <p className="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
   </div>
 );
 
@@ -58,21 +58,21 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <div class="flex flex-col h-[105vh] justify-center items-center pt-40 cursor-default md:pt-35">
-      <div class="flex flex-col justify-center items-center md:flex-row">
-        <div class="flex flex-col justify-center items-center text-center animate-fadeInUpText md:w-1/2 md:text-left md:items-start">
-          <h2 class="text-4xl">{t("home.h2")} <span class="inline-block hover:animate-wave">👋</span></h2>
-          <h2 class="text-5xl font-bold m-5 md:ml-0">{t("home.h1")}</h2>
-          <h3 class="text-xl pb-10 md:w-3/4">{t("home.h3")}</h3>
+    <div className="flex flex-col h-[105vh] justify-center items-center pt-40 cursor-default md:pt-35">
+      <div className="flex flex-col justify-center items-center md:flex-row">
+        <div className="flex flex-col justify-center items-center text-center animate-fadeInUpText md:w-1/2 md:text-left md:items-start">
+          <h2 className="text-4xl">{t("home.h2")} <span className="inline-block hover:animate-wave">👋</span></h2>
+          <h2 className="text-5xl font-bold m-5 md:ml-0">{t("home.h1")}</h2>
+          <h3 className="text-xl pb-10 md:w-3/4">{t("home.h3")}</h3>
         </div>
-        <div class="flex w-1/4 rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp mb-10">
-          <img src={profileImage} alt="Profile Picture" class="object-cover translate-x-1.5 md:translate-x-3"/>
+        <div className="flex w-1/4 rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp mb-10">
+          <img src={profileImage} alt="Profile Picture" className="object-cover translate-x-1.5 md:translate-x-3"/>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center text-center">
-        <h1 class="text-2xl font-bold animate-fadeInUpText">{t("home.welcome")}</h1>
-        <h2 class="text-xl animate-fadeInUpText">{t("home.technologiesTitle")}</h2>
-        <div class="flex w-3/4 justify-center items-center animate-fadeInUp pt-10">
+      <div className="flex flex-col justify-center items-center text-center">
+        <h1 className="text-2xl font-bold animate-fadeInUpText">{t("home.welcome")}</h1>
+        <h2 className="text-xl animate-fadeInUpText">{t("home.technologiesTitle")}</h2>
+        <div className="flex w-3/4 justify-center items-center animate-fadeInUp pt-10">
           <TechItem logoSrc={reactLogo} altText={t("technologies.react")} text={t("technologies.react")} customWrapper />
           <TechItem logoSrc={tailwindLogo} altText="Tailwind CSS Logo" text="Tailwind" />
           <TechItem logoSrc={firebaseLogo} altText="Firebase Logo" text='Firebase' />

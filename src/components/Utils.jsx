@@ -72,7 +72,7 @@ export const Utils = ({ isDark, setIsDark }) => {
 
   return (
     <>
-      <div class="fixed flex left-5 top-5">
+      <div class="fixed flex left-5 top-5 z-10">
         <div class="flex w-[51%] justify-center items-center text-center md:w-[60%]">
           <p class="text-">{t("languageSettings.chooseLanguage")}</p>
           <button
@@ -95,7 +95,7 @@ export const Utils = ({ isDark, setIsDark }) => {
           </button>
         </div>
       </div>
-      <div class="fixed flex justify-center items-center right-6 top-8 w-[20%]">
+      <div class="fixed flex justify-center items-center right-6 top-8 w-[20%] z-10">
         {isUserLoggedIn ? (
           <button onClick={handleLogout} class="">
             Logout

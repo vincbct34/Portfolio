@@ -21,7 +21,7 @@ export const SocialMedias = () => {
   };
 
   return (
-    <div className="fixed bottom-5 left-5 flex flex-col items-center">
+    <div className="fixed bottom-5 left-5 flex flex-col items-center z-20">
       <a 
         href="https://github.com/your-profile" 
         target="_blank" 
