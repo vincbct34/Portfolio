@@ -97,7 +97,7 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed flex flex-col items-center text-center left-1/2 -translate-x-1/2 top-28 z-10 md:gap-10 2xl:top-10">
+      <nav className="fixed flex flex-col items-center text-center left-1/2 -translate-x-1/2 top-28 z-10 md:gap-10 2xl:top-5">
         <div className="hidden flex-col justify-center items-center md:flex">
           {currentPageLogo}
         </div>
@@ -116,7 +116,7 @@ export const Navbar = () => {
             {links.map((link) => {
               const { id, url, text, icon } = link;
               return (
-                <Link key={id} to={url} className="flex flex-col items-center gap-2 font-bold transition duration-300 pb-10 ease group hover:translate-y-2">
+                <Link key={id} to={url} className="flex flex-col items-center gap-2 font-bold transition duration-300 pb-10 ease group hover:translate-y-2 2xl:hover:-translate-y-2 2xl:pt-10">
                   {text} {icon}
                 </Link>
               );
