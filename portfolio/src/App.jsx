@@ -7,7 +7,7 @@ import { useState } from "react";
 
 // Importing pages
 import Home from "./pages/Home.jsx";
-// import About from "./pages/About/About.jsx";
+// import About from "./pages/About.jsx";
 // import Experience from "./pages/Experience/Experience.jsx";
 // import Contact from "./pages/Contact/Contact.jsx";
 // import Signup from './components/Signup/Signup';
@@ -28,8 +28,13 @@ export const App = () => {
   return (
     <div className={`${isDark && "dark"}`}>
       <div className="w-full h-screen bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first transition-all duration-300 overflow-hidden">
-        <Header isDark={isDark} setIsDark={setIsDark}/>
-        <Home />
+        <Header isDark={isDark} setIsDark={setIsDark} />
+        <div className="overflow-y-auto h-full">
+          <Home />
+          {/* <About /> */}
+          {/* <Experience /> */}
+          {/* <Contact /> */}
+        </div>
       </div>
     </div>
   );

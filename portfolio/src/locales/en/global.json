@@ -1,79 +1,11 @@
 {
   "header": {
-    "languageSettings": {
     "chooseLanguage": "Language: "
-    },
-    "title": "Welcome to my Portfolio!"
-  },
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "experience": "Experience"
   },
   "home": {
-    "h1": "I'm Vincent.",
-    "h2": "Hello",
-    "h3": "I'm a developer student at EPITECH Montpellier.",
-    "welcome": "Welcome to my Portfolio!",
-    "technologiesTitle": "Technologies used:"
-  },
-  "technologies": {
-    "vite": "Vite",
-    "react": "React"
-  },
-  "signup": {
-    "placeholderEmail": "Email Address",
-    "emailLabel": "Email address",
-    "passwordLabel": "Password",
-    "passwordPlaceholder": "Password",
-    "signUpButton": "Sign Up",
-    "alreadyHaveAccount": "Already have an account?",
-    "logInLink": "Log in!"
-  },
-  "login": {
-    "placeholderEmail": "Email Address",
-    "emailLabel": "Email address",
-    "passwordLabel": "Password",
-    "passwordPlaceholder": "Password",
-    "loginButton": "Login",
-    "alreadyHaveAccount": "Don't have an account?",
-    "signUpLink": "Sign Up!"
-  },
-  "about": {
-    "carousel": "My skills",
-    "timeline": {
-      "birth": "I'm born in Aix-en-Provence, in France 👶",
-      "firstSteps": "First Steps in IT 🧑‍💻 (13 years later, just that!)",
-      "helpingMates": "In high school, I helped my classmates prepare for their exams, especially in science 📚",
-      "graduation": "I obtained my high school diploma in Maths / Physics - Chemistry with honors 🎓",
-      "epitech": "I entered EPITECH Montpellier 🚀 I was totally in the unknown, I had never programmed before!",
-      "passion": "I gradually discovered my passion for programming while participating in the school's Promoting 🌟",
-      "onBoarding": "I gained skills, participated in increasingly complex projects, and also took part in EPITECH's admission process 🛠️",
-      "webDev": "I discovered web development, which also became a real passion for me!",
-      "internship": "I did my end-of-first-year internship at EPSA Tax, where I honed my web knowledge 🖥️",
-      "newPortfolio": "I created my new portfolio, which is the one you are currently visiting 🌐!",
-      "future": "I am looking forward to the future and all the projects that await me!"
-    },
-    "timelineDate": {
-      "birth": "26/07/2005",
-      "firstSteps": "2018 ~ 2019",
-      "helpingMates": "2019 -> 2022",
-      "graduation": "Early 2022",
-      "epitech": "October 2022",
-      "passion": "2023",
-      "onBoarding": "Mid-2023",
-      "webDev": "Early 2024",
-      "internship": "July 2024",
-      "newPortfolio": "Late 2024",
-      "future": "2025 to the infinity, and beyond!"
-    },
-    "descriptionTitle": "About Me",
-    "description": " who discovered coding a little late in life but quickly fell in love with it. From my first steps in IT as a teenager to diving into the unknown at EPITECH Montpellier, I’ve grown a lot through hard work and perseverance. I enjoy web development and have already tackled some pretty exciting projects. When I’m not coding, I like helping others and pushing my limits. This portfolio is just the beginning, I'm excited for what the future holds!",
-    "descriptionFirstLetter": "I",
-    "descriptionBold": "'m a passionate developer",
-    "download": {
-      "title": "Some documents to download 📥",
-      "cv": "Download my CV"
-    }
+    "presentation": "Hi there ",
+    "name": "I'm Vincent!",
+    "title": "Welcome to my portfolio! 🌐",
+    "description": "I am a full-stack developer with a passion for creating beautiful and functional websites."
   }
 }
