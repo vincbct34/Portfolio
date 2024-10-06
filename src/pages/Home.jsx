@@ -1,6 +1,6 @@
 /**
- * @file Home.jsx is the component that displays the home page of the application, that doesn't require an account to be accessed.
- * It displays a welcome message, a short description of the technologies used and a picture of me.
+ * @file Home.jsx is the component that displays the home page of the application.
+ * It displays a welcome message, a short description of the technologies etc...
  * @author Vincent Bichat <vincent260705@gmail.com>
  */
 
@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 // Importing images
 import profileImage from './../assets/images/me.png';
 import viteLogo from './../assets/images/vite.svg';
-import firebaseLogo from './../assets/images/firebase.svg';
 import reactLogo from './../assets/images/react.svg';
 import tailwindLogo from './../assets/images/tailwind.svg';
 
@@ -26,14 +25,14 @@ import tailwindLogo from './../assets/images/tailwind.svg';
  * @returns {JSX.Element} The TechItem component.
  */
 const TechItem = ({ logoSrc, altText, text, customWrapper }) => (
-  <div className="flex flex-col w-[25vw] justify-center items-center text-center group md:w-[15vw]">
-    <p className="mt-5 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
+  <div className="flex flex-col w-1/4 justify-center items-center group">
+    <p className=" opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 group-hover:-translate-y-2">{text}</p>
     {customWrapper ? (
-      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-custom">
+      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:animate-turn hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo">
         <img src={logoSrc} alt={altText} />
       </div>
     ) : (
-      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:drop-shadow-custom">
+      <div className="flex justify-center items-center transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo">
         <img src={logoSrc} alt={altText} />
       </div>
     )}
@@ -49,38 +48,36 @@ TechItem.propTypes = {
 };
 
 /**
- * Home is the component that displays the home page of the application, that doesn't require an account to be accessed.
+ * Home is the component that displays the home page of the application.
  * 
  * @returns {JSX.Element} The Home component.
  */
 export const Home = () => {
-  // Translation hook
   const { t } = useTranslation("global");
 
   return (
-    <div className="flex flex-col h-[110vh] justify-center items-center pt-40 cursor-default md:pt-35">
-      <div className="flex flex-col justify-center items-center md:flex-row">
-        <div className="flex flex-col justify-center items-center text-center animate-fadeInUpText md:w-1/2 md:text-left md:items-start">
-          <h2 className="text-4xl">{t("home.h2")} <span className="inline-block hover:animate-wave">👋</span></h2>
-          <h2 className="text-5xl font-bold m-5 md:ml-0">{t("home.h1")}</h2>
-          <h3 className="text-xl pb-10 md:w-3/4">{t("home.h3")}</h3>
+    <section>
+      <div className="flex flex-col items-center justify-center">
+        <div className="relative flex flex-col md:flex-row md:w-full items-center justify-center mt-5">
+          <div className="flex flex-col md:w-1/2 items-center justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-center m-2 pl-2">{t("home.presentation")}<span className="inline-block cursor-default hover:animate-wave">👋</span></h1>
+            <h3 className="text-2xl md:text-4xl font-bold text-center md:m-5">{t("home.name")}</h3>
+            <h2 className="text-4xl font-bold text-center m-5">{t("home.title")}</h2>
+            <p className="text-center">{t("home.description")}</p>
+          </div>
+          <div className="flex rounded-full shadow-darkProfileShadow dark:shadow-lightProfileShadow overflow-hidden m-10">
+            <img src={profileImage} alt="Me" className="object-cover translate-x-2.5 md:translate-x-5" />
+          </div>
         </div>
-        <div className="flex w-1/4 rounded-full shadow-profileShadow bg-white overflow-hidden animate-fadeInUp mb-10">
-          <img src={profileImage} alt="Profile Picture" className="object-cover translate-x-1.5 md:translate-x-3"/>
+        <div className="relative flex flex-wrap justify-center items-center gap-5">
+          <TechItem logoSrc={viteLogo} altText="Vite logo" text="Vite" />
+          <TechItem logoSrc={reactLogo} altText="React logo" text="React" customWrapper />
+          <TechItem logoSrc={tailwindLogo} altText="Tailwind CSS logo" text="Tailwind" />
         </div>
-      </div>
-      <div className="flex flex-col justify-center items-center text-center">
-        <h1 className="text-2xl font-bold animate-fadeInUpText">{t("home.welcome")}</h1>
-        <h2 className="text-xl animate-fadeInUpText">{t("home.technologiesTitle")}</h2>
-        <div className="flex w-3/4 justify-center items-center animate-fadeInUp pt-10">
-          <TechItem logoSrc={reactLogo} altText={t("technologies.react")} text={t("technologies.react")} customWrapper />
-          <TechItem logoSrc={tailwindLogo} altText="Tailwind CSS Logo" text="Tailwind" />
-          <TechItem logoSrc={firebaseLogo} altText="Firebase Logo" text='Firebase' />
-          <TechItem logoSrc={viteLogo} altText="Vite Logo" text={t("technologies.vite")} />
-        </div>
-      </div>
-    </div>
+      </div >
+    </section>
   );
 };
+
 
 export default Home;

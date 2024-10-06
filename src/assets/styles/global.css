@@ -10,27 +10,22 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Panton", sans-serif;
   letter-spacing: 5px;
 }
 
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --toggle-bg: #e0e0e0;
-  --toggle-fg: #303030;
-  --shadow-color: #000000;
-}
-
-[data-theme="dark"] {
-  --background-color: #000000;
-  --text-color: #ffffff;
-  --toggle-bg: #303030;
-  --toggle-fg: #ffffff;
-  --shadow-color: #ffffff;
+@layer base {
+  :root {
+    --dark-first-clr: 13 19 33;
+    --dark-second-clr: 28 37 65;
+    --dark-third-clr: 47 62 90;
+    --light-first-clr: 245 245 245;
+    --light-second-clr: 224 224 224;
+    --light-third-clr: 192 192 192;
+    --dark-shadow-color: 0 0 0;
+    --light-shadow-color: 255 255 255;
+  }
 }
 
 @media (max-width: 768px) {
