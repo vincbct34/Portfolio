@@ -67,7 +67,7 @@ export const About = () => {
   }
 
   return (
-    <section id="about" className="bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
+    <section id="about" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
       <div className="">
         <div className="">
           <div className="">

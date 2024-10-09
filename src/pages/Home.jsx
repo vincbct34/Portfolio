@@ -56,7 +56,7 @@ export const Home = () => {
   const { t } = useTranslation("global");
 
   return (
-    <section id="home" className="bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
+    <section id="home" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
       <div className="flex flex-col items-center justify-center">
         <div className="relative flex flex-col md:flex-row md:w-full items-center justify-center mt-5">
           <div className="flex flex-col md:w-1/2 items-center justify-center">
