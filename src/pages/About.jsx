@@ -41,30 +41,8 @@ import cvPdf from '../assets/files/Cv.pdf';
  * @returns {JSX.Element} The About component.
  */
 export const About = () => {
-  // Hook to navigate to another page
-  // const navigate = useNavigate();
-
   // Hook to use the translation functions
   const { t } = useTranslation("global");
-
-  // Check if the user is logged in. If not, redirect to the login page.
-  // useEffect(()=>{
-  //   onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       const uid = user.uid;
-
-  //       console.log("uid", uid);
-  //     } else {
-  //       console.log("user is logged out")
-  //       navigate('/login');
-  //     }
-  //     });
-  // }, )
-
-  // Function to handle the change of the page
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  }
 
   return (
     <section id="about" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
@@ -74,7 +52,7 @@ export const About = () => {
             <TbCalendarTime size={40} />
           </div>
           <div className="">
-            <TimelineItem side={"left"} date={t("about.timelineDate.birth")} text={t("about.timeline.birth")} logo={<FaBaby size={25} />} logoAlt={"Baby"} />
+            {/* <TimelineItem side={"left"} date={t("about.timelineDate.birth")} text={t("about.timeline.birth")} logo={<FaBaby size={25} />} logoAlt={"Baby"} />
             <TimelineItem side={"right"} date={t("about.timelineDate.firstSteps")} text={t("about.timeline.firstSteps")} logo={<IoFootstepsOutline size={25} />} logoAlt={"First Steps"} />
             <TimelineItem side={"left"} date={t("about.timelineDate.helpingMates")} text={t("about.timeline.helpingMates")} logo={<MdHomeWork size={25} />} logoAlt={"Homework"} />
             <TimelineItem side={"right"} date={t("about.timelineDate.graduation")} text={t("about.timeline.graduation")} logo={<GiDiploma size={25} />} logoAlt={"Degree"} />
@@ -84,18 +62,18 @@ export const About = () => {
             <TimelineItem side={"right"} date={t("about.timelineDate.webDev")} text={t("about.timeline.webDev")} logo={<MdWeb size={25} />} logoAlt={"Web Development"} />
             <TimelineItem side={"left"} date={t("about.timelineDate.internship")} text={t("about.timeline.internship")} logo={<MdOutlineWork size={25} />} logoAlt={"Internship"} />
             <TimelineItem side={"right"} date={t("about.timelineDate.newPortfolio")} text={t("about.timeline.newPortfolio")} logo={<SiWebmoney size={25} />} logoAlt={"Portfolio"} />
-            <TimelineItem side={"last"} date={t("about.timelineDate.future")} text={t("about.timeline.future")} logo={<ImRocket size={25} />} logoAlt={"Future"} />
+            <TimelineItem side={"last"} date={t("about.timelineDate.future")} text={t("about.timeline.future")} logo={<ImRocket size={25} />} logoAlt={"Future"} /> */}
           </div>
         </div>
-        <div className="">
+        <div className="w-full">
           <h2>{t("about.descriptionTitle")}<span>💡</span></h2>
           <img src={aboutLogo} alt="About" />
-          <p><span>{t("about.descriptionFirstLetter")}</span><span>{t("about.descriptionBold")}</span>{t("about.description")}</p>
+          {/* <p><span>{t("about.descriptionFirstLetter")}</span><span>{t("about.descriptionBold")}</span>{t("about.description")}</p> */}
           <h3>{t("about.download.title")}</h3>
-          <div className="">
+          <div className="w-full">
             <img src={CVPreview} alt="CV" />
             <a href={cvPdf} download>
-              <button className="">{t("about.download.cv")}</button>
+              <button className="w-full">{t("about.download.cv")}</button>
             </a>
           </div>
         </div>

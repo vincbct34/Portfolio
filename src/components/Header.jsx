@@ -38,13 +38,13 @@ export const Header = ({isDark, setIsDark}) => {
 
   return (
     <>
-      <div className="sticky flex h-[8vh] w-full justify-between items-center px-10 z-50 bg-light-second dark:bg-dark-second">
+      <div className="sticky flex h-[8vh] w-full justify-between items-center px-10 z-50 bg-light-second dark:bg-dark-second text-dark-first dark:text-light-first">
         <div className="flex h-1/2 w-2/3 md:w-1/4 items-center gap-4">
           <p className="md:text-2xl">{t("header.chooseLanguage")}</p>
           <button
             onClick={() => handleLanguageChange("en")}
             className={classNames(
-              "w-1/6 transition-transform duration-300 hover:scale-110", 
+              "w-1/6 transition-transform duration-300 hover:scale-110",
               {
                 "grayscale-0": languageSelected === "en",
                 "grayscale": languageSelected !== "en"
