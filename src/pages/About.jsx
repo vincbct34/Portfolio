@@ -67,7 +67,7 @@ export const About = () => {
   }
 
   return (
-    <div className="">
+    <section id="about" className="bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first">
       <div className="">
         <div className="">
           <div className="">
@@ -100,7 +100,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

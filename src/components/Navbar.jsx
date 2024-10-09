@@ -4,6 +4,7 @@ import { FaHome, FaArrowCircleLeft } from 'react-icons/fa';
 import { RiComputerLine } from 'react-icons/ri';
 import { GrContact } from 'react-icons/gr';
 import { SiAboutdotme } from 'react-icons/si';
+import { Link } from 'react-scroll';
 
 export const Navbar = () => {
   const { t } = useTranslation("global");
@@ -32,39 +33,39 @@ export const Navbar = () => {
             } overflow-hidden`}
           >
             <div className="flex flex-col items-center justify-center h-full bg-white">
-              <a href="#home" className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
+              <Link to="home" smooth={true} duration={500} className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
                 <FaHome size={24} />
-              </a>
-              <a href="#about" className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
+              </Link>
+              <Link to="about" smooth={true} duration={500} className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
                 <SiAboutdotme size={24} />
-              </a>
-              <a href="#experience" className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
+              </Link>
+              <Link to="experience" smooth={true} duration={500} className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
                 <RiComputerLine size={24} />
-              </a>
-              <a href="#contact" className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
+              </Link>
+              <Link to="contact" smooth={true} duration={500} className="p-4 rounded-full transition duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo hover:bg-gray-200">
                 <GrContact size={24} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       ) : (
         <div className="w-1/3 h-full bg-light-second dark:bg-dark-second text-dark-first dark:text-light-first flex ml-72 items-center flex-row">
-          <a href="#home" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
+          <Link to="home" smooth={true} duration={500} className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
             <FaHome size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.home")}</p>
-          </a>
-          <a href="#about" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
+          </Link>
+          <Link to="about" smooth={true} duration={500} className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
             <SiAboutdotme size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.about")}</p>
-          </a>
-          <a href="#experience" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
+          </Link>
+          <Link to="experience" smooth={true} duration={500} className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
             <RiComputerLine size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.experience")}</p>
-          </a>
-          <a href="#contact" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
+          </Link>
+          <Link to="contact" smooth={true} duration={500} className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
             <GrContact size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.contact")}</p>
-          </a>
+          </Link>
         </div>
       )}
     </>

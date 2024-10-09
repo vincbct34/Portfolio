@@ -26,16 +26,14 @@ export const App = () => {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <div className={`${isDark && "dark"}`}>
-      <div className="w-full h-screen bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first transition-all duration-300 overflow-hidden">
-        <Header isDark={isDark} setIsDark={setIsDark} />
-        <div className="overflow-y-auto scroll-smooth h-full no-scrollbar">
-          <Home />
-          <About />
-          {/* <Experience /> */}
-          {/* <Contact /> */}
-        </div>
+    <div className={`${isDark && "dark"} scroll-smooth`}>
+      <div className="sticky top-0 z-50">
+        <Header isDark={isDark} setIsDark={setIsDark}/>
       </div>
+      <Home />
+      <About />
+      {/* <Experience /> */}
+      {/* <Contact /> */}
     </div>
   );
 };
