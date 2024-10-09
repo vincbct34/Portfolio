@@ -38,7 +38,7 @@ export const Header = ({isDark, setIsDark}) => {
 
   return (
     <>
-      <div className="sticky flex h-[15vh] w-full justify-between items-center px-10 z-50 bg-light-second dark:bg-dark-second">
+      <div className="sticky flex h-[8vh] w-full justify-between items-center px-10 z-50 bg-light-second dark:bg-dark-second">
         <div className="flex h-1/2 w-2/3 md:w-1/4 items-center gap-4">
           <p className="md:text-2xl">{t("header.chooseLanguage")}</p>
           <button

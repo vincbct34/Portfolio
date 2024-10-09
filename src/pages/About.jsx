@@ -67,13 +67,13 @@ export const About = () => {
   }
 
   return (
-    <div className={styles.about}>
-      <div className={styles.timelineContainer}>
-        <div className={styles.leftTimeline}>
-          <div className={styles.startTimeline}>
+    <div className="">
+      <div className="">
+        <div className="">
+          <div className="">
             <TbCalendarTime size={40} />
           </div>
-          <div className={styles.timeline}>
+          <div className="">
             <TimelineItem side={"left"} date={t("about.timelineDate.birth")} text={t("about.timeline.birth")} logo={<FaBaby size={25} />} logoAlt={"Baby"} />
             <TimelineItem side={"right"} date={t("about.timelineDate.firstSteps")} text={t("about.timeline.firstSteps")} logo={<IoFootstepsOutline size={25} />} logoAlt={"First Steps"} />
             <TimelineItem side={"left"} date={t("about.timelineDate.helpingMates")} text={t("about.timeline.helpingMates")} logo={<MdHomeWork size={25} />} logoAlt={"Homework"} />
@@ -87,15 +87,15 @@ export const About = () => {
             <TimelineItem side={"last"} date={t("about.timelineDate.future")} text={t("about.timeline.future")} logo={<ImRocket size={25} />} logoAlt={"Future"} />
           </div>
         </div>
-        <div className={styles.description}>
+        <div className="">
           <h2>{t("about.descriptionTitle")}<span>💡</span></h2>
           <img src={aboutLogo} alt="About" />
-          <p><span style={{fontSize: '5em'}}>{t("about.descriptionFirstLetter")}</span><span style={{fontWeight: '900', fontSize: '1.5em'}}>{t("about.descriptionBold")}</span>{t("about.description")}</p>
+          <p><span>{t("about.descriptionFirstLetter")}</span><span>{t("about.descriptionBold")}</span>{t("about.description")}</p>
           <h3>{t("about.download.title")}</h3>
-          <div className={styles.download}>
+          <div className="">
             <img src={CVPreview} alt="CV" />
             <a href={cvPdf} download>
-              <button className={styles.downloadButton}>{t("about.download.cv")}</button>
+              <button className="">{t("about.download.cv")}</button>
             </a>
           </div>
         </div>

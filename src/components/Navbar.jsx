@@ -50,19 +50,19 @@ export const Navbar = () => {
       ) : (
         <div className="w-1/3 h-full bg-light-second dark:bg-dark-second text-dark-first dark:text-light-first flex ml-72 items-center flex-row">
           <a href="#home" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
-            <FaHome size={40} />
+            <FaHome size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.home")}</p>
           </a>
           <a href="#about" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
-            <SiAboutdotme size={40} />
+            <SiAboutdotme size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.about")}</p>
           </a>
           <a href="#experience" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
-            <RiComputerLine size={40} />
+            <RiComputerLine size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.experience")}</p>
           </a>
           <a href="#contact" className="flex flex-col justify-center items-center w-1/4 mt-4 group transition-all duration-300 hover:mt-0">
-            <GrContact size={40} />
+            <GrContact size={30} />
             <p className="text-sm xl:text-xl opacity-0 transform scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">{t("navbar.contact")}</p>
           </a>
         </div>
