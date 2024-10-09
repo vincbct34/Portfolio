@@ -1,6 +1,12 @@
 {
   "header": {
-    "chooseLanguage": "Langue : "
+    "chooseLanguage": "Langue "
+  },
+  "navbar": {
+    "home": "Accueil",
+    "about": "Moi ?",
+    "experience": "Expérience",
+    "contact": "Contact"
   },
   "home": {
     "presentation": "Salut ",

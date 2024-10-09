@@ -1,0 +1,186 @@
+/* This is the CSS file for the About page. */
+
+.About {
+    display: flex;
+    height: 210vh;
+    padding-top: 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: background-color 0.25s ease-in-out;
+    cursor: default;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .About .timelineContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10vh);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .About .leftTimeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .About .startTimeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  }
+  
+  .About .timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .Description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 2vh;
+    width: 40%;
+    color: var(--text-color);
+    transition: color 0.25s ease-in-out;
+  }
+  
+  .Description h2 {
+    font-size: 2.5em;
+  }
+  
+  .Description h2 span {
+    display: inline-block;
+    animation: lightBulb 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes lightBulb {
+    0% {
+      color: var(--text-color);
+      text-shadow: none;
+    }
+    100% {
+      color: yellow;
+      text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    }
+  }
+  
+  .Description img {
+    width: 50vh;
+    height: 50vh;
+    margin: -5vh 0 -15vh 0;
+  }
+  
+  .Description p {
+    font-size: 1.5em;
+  }
+  
+  .Description h3 {
+    font-size: 2em;
+    padding-top: 5vh;
+    text-align: center;
+  }
+  
+  .Download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20vh;
+    padding-top: 5vh;
+  }
+  
+  .Download img {
+    width: 60%;
+    height: auto;
+  }
+  
+  .Download button {
+    justify-content: center;
+    padding: 1vh;
+    width: 40vh;
+    height: 5vh;
+    border: none;
+    border-radius: 5vh;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, shadow 0.25s ease-in-out;
+  }
+  
+  .Download button:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .About {
+      height: 500vh;
+      padding-top: 0;
+    }
+  
+    .About .timelineContainer {
+      flex-direction: column;
+    }
+  
+    .About .leftTimeline {
+      width: 100%;
+    }
+  
+    .About .startTimeline {
+      width: 10vh;
+      height: 10vh;
+    }
+  
+    .Description {
+      width: 90%;
+    }
+  
+    .Description img {
+      width: 80%;
+      height: auto;
+      margin: 2vh;
+    }
+  
+    .Download {
+      gap: 0vh;
+    }
+  
+    .firstDiv {
+      width: 100%;
+    }
+  }

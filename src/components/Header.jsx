@@ -75,10 +75,10 @@ export const Header = ({isDark, setIsDark}) => {
           </button>
         </div>
         <Navbar />
-        <div className="flex h-1/2 w-1/4 items-center justify-end">
+        <div className="flex h-1/2 w-1/6 items-center justify-end">
           <button
             onClick={() => {setIsDark(!isDark)}}
-            className="flex justify-center items-center h-zuto w-1/3 md:w-1/6 rounded dark:bg-light-first transition-all duration-300 hover:scale-125 hover:shadow-toggleDarkMode dark:hover:shadow-toggleLightMode"
+            className="flex justify-center items-center h-zuto w-1/3 md:w-1/4 rounded dark:bg-light-first transition-all duration-300 hover:scale-125 hover:shadow-toggleDarkMode dark:hover:shadow-toggleLightMode"
           >
             {isDark ? (
               <span>
