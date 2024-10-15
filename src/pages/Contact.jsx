@@ -4,8 +4,8 @@ import TextInput from '../components/TextInput';
 import Textarea from '../components/TextArea';
 import { gapi } from 'gapi-script';
 
-const CLIENT_ID = '78271924746-s1gddsbod0u1md3ji7bd6678g4sda88g.apps.googleusercontent.com';
-const API_KEY = 'AIzaSyDvLiprU9GxvrtD9N4-W9_bb4Dv94RIaWU';
+const CLIENT_ID = 'GO FCK YRSELF';
+const API_KEY = 'GO FCK YRSELF';
 const SCOPES = 'https://www.googleapis.com/auth/gmail.send';
 
 const Contact = () => {
@@ -105,10 +105,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first pb-10">
+    <section id="contact" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first py-20">
       <div className="flex w-full flex-col justify-center items-center">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col w-1/3">
+        <form onSubmit={handleSubmit} className="flex flex-col w-3/4 md:w-1/2">
           <TextInput
             id="firstName"
             label="First Name"
@@ -136,7 +136,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="flex justify-center items-center text-lg bg-light-first dark:bg-dark-first relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full"
+            class="flex justify-center items-center text-lg bg-light-first dark:bg-dark-first before:absolute before:w-full before:transition-all before:duration-700 before:-left-full before:hover:left-0 before:rounded-full before:bg-dark-first dark:before:bg-light-first hover:text-light-first hover:dark:text-dark-first before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full"
           >
             Send
           </button>
