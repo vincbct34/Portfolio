@@ -4,7 +4,7 @@ import { useState } from "react";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 // import Experience from "./pages/Experience/Experience.jsx";
-// import Contact from "./pages/Contact/Contact.jsx";
+import Contact from "./pages/Contact.jsx";
 // import Signup from './components/Signup/Signup';
 // import Login from './components/Login/Login';
 
@@ -51,9 +51,8 @@ export const App = () => {
       <div className="z-10">
         <Home />
         <About />
-        {/* Additional pages can be added here in the future */}
         {/* <Experience /> */}
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

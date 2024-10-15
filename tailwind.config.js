@@ -23,6 +23,9 @@ export default {
       'dark-first': 'rgb(var(--dark-first-clr))',
       'dark-second': 'rgb(var(--dark-second-clr))',
       'dark-third': 'rgb(var(--dark-third-clr))',
+      red: {
+        500: '#f56565',
+      }
     },
     keyframes: {
       WaveAnimation: {
