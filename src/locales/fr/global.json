@@ -13,5 +13,31 @@
     "name": "Moi, c'est Vincent !",
     "title": "Bienvenue sur mon portfolio ! 🌐",
     "description": "Je suis un développeur full-stack passionné par la création de sites web attrayants et fonctionnels."
+  },
+  "timeline": {
+    "birth": "Je suis né à Aix-en-Provence, en France 👶",
+    "firstSteps": "Mes premiers pas dans l'informatique 🧑‍💻 (13 ans plus tard, rien que ça !)",
+    "helpingMates": "Au lycée, j'aidais mes camarades de classe à préparer leurs examens, notamment scientifiques 📚",
+    "graduation": "J'obtiens mon baccalauréat Maths / Physique - Chimie Mention Bien 🎓",
+    "epitech": "J'entre à EPITECH Montpellier 🚀 Je suis dans l'inconnu total, je n'ai jamais programmé !",
+    "passion": "Je découvre peu à peu ma passion pour la programmation, tout en participant au Promoting de l'école 🌟",
+    "onBoarding": "Je participe à des projets de plus en plus complexes, je participe également au processus d'admission d'EPITECH 🛠️",
+    "webDev": "Je découvre le développement web, là aussi une véritable passion pour moi !",
+    "internship": "Je réalise mon stage de fin de première année à EPSA Tax, où j'aiguise mes connaissances du Web 🖥️",
+    "newPortfolio": "Je réalise mon nouveau portfolio, qui est celui que vous êtes en train de visiter 🌐 !",
+    "future": "J'ai hâte de découvrir le futur et tous les projets qui m'attendent !"
+  },
+  "timelineDate": {
+    "birth": "26/07/05",
+    "firstSteps": "2018 ~ 2019",
+    "helpingMates": "2019 -> 2022",
+    "graduation": "Début 2022",
+    "epitech": "Octobre 2022",
+    "passion": "2023",
+    "onBoarding": "Milieu 2023",
+    "webDev": "Début 2024",
+    "internship": "Juillet 2024",
+    "newPortfolio": "Fin 2024",
+    "future": "2025 vers l'infini et au-delà !"
   }
 }

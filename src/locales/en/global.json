@@ -13,5 +13,31 @@
     "name": "I'm Vincent!",
     "title": "Welcome to my portfolio! 🌐",
     "description": "I am a full-stack developer with a passion for creating beautiful and functional websites."
+  },
+  "timeline": {
+    "birth": "I'm born in Aix-en-Provence, in France 👶",
+    "firstSteps": "First Steps in IT 🧑‍💻 (13 years later, just that!)",
+    "helpingMates": "In high school, I helped my classmates prepare for their exams, especially in science 📚",
+    "graduation": "I obtained my high school diploma in Maths / Physics - Chemistry with honors 🎓",
+    "epitech": "I entered EPITECH Montpellier 🚀 I was totally in the unknown, I had never programmed before!",
+    "passion": "I gradually discovered my passion for programming while participating in the school's Promoting 🌟",
+    "onBoarding": "I gained skills, participated in increasingly complex projects, and also took part in EPITECH's admission process 🛠️",
+    "webDev": "I discovered web development, which also became a real passion for me!",
+    "internship": "I did my end-of-first-year internship at EPSA Tax, where I honed my web knowledge 🖥️",
+    "newPortfolio": "I created my new portfolio, which is the one you are currently visiting 🌐!",
+    "future": "I am looking forward to the future and all the projects that await me!"
+  },
+  "timelineDate": {
+    "birth": "26/07/2005",
+    "firstSteps": "2018 ~ 2019",
+    "helpingMates": "2019 -> 2022",
+    "graduation": "Early 2022",
+    "epitech": "October 2022",
+    "passion": "2023",
+    "onBoarding": "Mid-2023",
+    "webDev": "Early 2024",
+    "internship": "July 2024",
+    "newPortfolio": "Late 2024",
+    "future": "2025 to the infinity, and beyond!"
   }
 }

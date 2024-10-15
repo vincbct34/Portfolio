@@ -26,30 +26,31 @@ export const SocialMedias = () => {
         href="https://github.com/vincbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-12 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-16 scale-150" : ""} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
-        <FaGithub alt="Github" />
+        <FaGithub size={24} />
       </a>
       <a 
         href="https://facebook.com/vincentbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "-translate-y-12 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "-translate-y-16 scale-150" : ""} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
-        <FaFacebook alt="Facebook" />
+        <FaFacebook size={24} />
       </a>
       <a 
         href="https://linkedin.com/in/vincent-bichat" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-transform duration-300 ease-in-out text-current z-10 ${active ? "translate-x-9 -translate-y-9 scale-150" : ""}`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-12 -translate-y-12 scale-150" : ""} transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
-        <FaLinkedin alt="LinkedIn" />
+        <FaLinkedin size={24} />
       </a>
       <FaExternalLinkAlt 
-        className="fixed bottom-5 left-5 cursor-pointer bg-[var(--background-color)] text-current transition-transform duration-300 ease-in-out z-20" 
+        className="fixed bottom-5 left-5 cursor-pointer bg-light-first dark:bg-dark-first dark:text-light-first z-20" 
         alt="Links" 
         onClick={handleLinkClick} 
+        size={24}
       />
     </div>
   );

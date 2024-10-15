@@ -13,8 +13,6 @@ export default {
     boxShadow: {
       'toggleDarkMode': '0 1vh 5vh rgb(var(--dark-first-clr))',
       'toggleLightMode': '0 1vh 5vh rgb(var(--light-first-clr))',
-    },
-    boxShadow: {
       'darkProfileShadow': '0 1vh 5vh rgb(var(--dark-shadow-color))',
       'lightProfileShadow': '0 1vh 5vh rgb(var(--light-shadow-color))',
     },
@@ -42,10 +40,22 @@ export default {
         '50%': { transform: 'rotate(360deg) scale(1.1)' },
         '100%': { transform: 'rotate(-360deg) scale(1)' },
       },
+      backAnimation: {
+        '0%': { transform: 'scale(0) translateY(0) rotate(0)', opacity: 1 },
+        '100%': { transform: 'scale(1.3) translateY(-90px) rotate(360deg)', opacity: 0 },
+      }
     },
     animation: {
-      wave: 'WaveAnimation 1s ease-in-out infinite',
-      turn: 'turnAnimation 5s ease-in-out infinite',
+      wave: 'WaveAnimation 10s ease-in-out infinite',
+      turn: 'turnAnimation 7s ease-in-out infinite',
+      back1: 'backAnimation 9s linear infinite',
+      back2: 'backAnimation 10s linear infinite',
+      back3: 'backAnimation 6s linear infinite',
+      back4: 'backAnimation 12s linear infinite',
+      back5: 'backAnimation 15s linear infinite',
+      back6: 'backAnimation 16s linear infinite',
+      back7: 'backAnimation 9s linear infinite',
+      back8: 'backAnimation 5s linear infinite',
     },
   },
   plugins: [],
