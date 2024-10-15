@@ -55,7 +55,6 @@ export const App = () => {
         {/* <Experience /> */}
         {/* <Contact /> */}
       </div>
-
     </div>
   );
 };

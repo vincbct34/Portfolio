@@ -78,7 +78,7 @@ const Home = () => {
           </div>
           {/* Profile image with shadow effect */}
           <div className="flex rounded-full shadow-darkProfileShadow dark:shadow-lightProfileShadow overflow-hidden m-10">
-            <img src={profileImage} alt="Me" className="object-cover translate-x-5" />
+            <img src={profileImage} alt="Me" className="translate-x-4" />
           </div>
         </div>
         {/* Technology logos for Vite, React, and Tailwind */}
