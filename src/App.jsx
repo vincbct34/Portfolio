@@ -34,7 +34,6 @@ export const App = () => {
         <Header isDark={isDark} setIsDark={setIsDark}/>
         <SocialMedias />
       </div>
-      
       {/* BackgroundItem components for animated background effects */}
       <div className="z-0">
         <BackgroundItem top={12} left={42} animation="animate-back1" />
@@ -46,7 +45,6 @@ export const App = () => {
         <BackgroundItem top={60} left={80} animation="animate-back7" />
         <BackgroundItem top={32} left={25} animation="animate-back8" />
       </div>
-      
       {/* Main content sections */}
       <div className="z-10">
         <Home />

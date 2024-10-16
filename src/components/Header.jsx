@@ -80,20 +80,18 @@ export const Header = ({ isDark, setIsDark }) => {
           </button>
         </div>
       </div>
-      
       {/* Navbar component */}
       <Navbar />
-      
       {/* Dark mode toggle section */}
       <div className="flex items-center justify-end pb-1">
         <button
-          onClick={() => setIsDark(!isDark)} // Toggle dark mode state
-          className="flex justify-center items-center h-12 w-12 rounded-full dark:bg-light-first transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+          onClick={() => setIsDark(!isDark)}
+          className="flex justify-center items-center rounded-full dark:bg-light-first transition-transform duration-300 hover:scale-110 hover:shadow-lg"
         >
           {isDark ? (
-            <img src={sun} alt="Light Mode" className="h-10 w-10" />
+            <img src={sun} alt="Light Mode" className="h-8 w-8" />
           ) : (
-            <img src={moon} alt="Dark Mode" className="h-10 w-10" />
+            <img src={moon} alt="Dark Mode" className="h-8 w-8" />
           )}
         </button>
       </div>
@@ -103,6 +101,6 @@ export const Header = ({ isDark, setIsDark }) => {
 
 // PropTypes validation for Header component
 Header.propTypes = {
-  isDark: PropTypes.bool.isRequired,    // Indicates if dark mode is enabled
-  setIsDark: PropTypes.func.isRequired   // Function to change dark mode state
+  isDark: PropTypes.bool.isRequired,
+  setIsDark: PropTypes.func.isRequired
 };

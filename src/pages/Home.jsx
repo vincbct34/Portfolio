@@ -13,6 +13,7 @@ import profileImage from './../assets/images/me.png';
 import viteLogo from './../assets/images/vite.svg';
 import reactLogo from './../assets/images/react.svg';
 import tailwindLogo from './../assets/images/tailwind.svg';
+import googleCloudLogo from './../assets/images/google-cloud.svg';
 
 /**
  * @component TechItem
@@ -81,8 +82,8 @@ const Home = () => {
             <img src={profileImage} alt="Me" className="translate-x-4" />
           </div>
         </div>
-        {/* Technology logos for Vite, React, and Tailwind */}
-        <div className="relative flex flex-wrap justify-center items-center gap-5">
+        {/* Technology logos for Vite, React, Tailwind, and Google Cloud */}
+        <div className="relative flex flex-row justify-center items-center gap-5">
           <TechItem logoSrc={viteLogo} altText="Vite logo" text="Vite" />
           <TechItem logoSrc={reactLogo} altText="React logo" text="React" customWrapper />
           <TechItem logoSrc={tailwindLogo} altText="Tailwind CSS logo" text="Tailwind" />

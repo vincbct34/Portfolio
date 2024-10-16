@@ -49,7 +49,6 @@ const About = () => {
               <TbCalendarTime size={50} className="transition-transform duration-300 group-hover:translate-x-[-70px]" />
               <p className="absolute right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Timeline</p>
             </div>
-
             {/* Timeline items displaying important life events */}
             <TimelineItem side="left" date={t("timelineDate.birth")} text={t("timeline.birth")} logo={<FaBaby size={35}/>} logoAlt={"Baby"} />
             <TimelineItem side="right" date={t("timelineDate.firstSteps")} text={t("timeline.firstSteps")} logo={<IoFootstepsOutline size={35} />} logoAlt={"First Steps"} />

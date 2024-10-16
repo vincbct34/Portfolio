@@ -13,20 +13,20 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element} The TextInput component.
  */
 const TextInput = ({ id, label, type = 'text', placeholder, error }) => (
-  <div className="mb-4"> {/* Container for the input component */}
+  <div className="mb-4">
     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor={id}>
-      {label} {/* Label for the input */}
+      {label}
     </label>
     <input
-      type={type} // Type of input (e.g., text, email, password)
-      id={id} // Unique identifier for the input element
-      name={id} // Sets the name attribute to the same value as id
-      className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-        error ? 'border-red-500' : '' // Conditional class for error state
+      type={type}
+      id={id}
+      name={id}
+      className={`shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline placeholder-gray-500 text-dark-first ${
+        error ? 'border-red-500' : ''
       }`}
-      placeholder={placeholder} // Placeholder text displayed in the input
+      placeholder={placeholder}
     />
-    {error && ( // Conditionally render error message if exists
+    {error && (
       <p className="text-red-500 text-xs italic font-bold">{error}</p>
     )}
   </div>
@@ -36,9 +36,9 @@ export default TextInput;
 
 // Prop types for the TextInput component
 TextInput.propTypes = {
-  id: PropTypes.string.isRequired, // Required prop for unique identifier
-  label: PropTypes.string.isRequired, // Required prop for label text
-  type: PropTypes.string, // Optional prop for input type
-  placeholder: PropTypes.string.isRequired, // Required prop for placeholder text
-  error: PropTypes.string, // Optional prop for error message
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
+  error: PropTypes.string,
 };

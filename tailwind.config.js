@@ -46,11 +46,17 @@ export default {
       backAnimation: {
         '0%': { transform: 'scale(0) translateY(0) rotate(0)', opacity: 1 },
         '100%': { transform: 'scale(1.3) translateY(-90px) rotate(360deg)', opacity: 0 },
-      }
+      },
+      bounceAnimation: {
+        '0%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-10px)' },
+        '100%': { transform: 'translateY(0)' },
+      },
     },
     animation: {
       wave: 'WaveAnimation 10s ease-in-out infinite',
       turn: 'turnAnimation 7s ease-in-out infinite',
+      bounce: 'bounceAnimation 1s linear infinite',
       back1: 'backAnimation 9s linear infinite',
       back2: 'backAnimation 10s linear infinite',
       back3: 'backAnimation 6s linear infinite',
