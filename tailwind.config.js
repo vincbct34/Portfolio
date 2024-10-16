@@ -52,11 +52,16 @@ export default {
         '50%': { transform: 'translateY(-10px)' },
         '100%': { transform: 'translateY(0)' },
       },
+      slideEffect: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-50%)' },
+      },
     },
     animation: {
       wave: 'WaveAnimation 10s ease-in-out infinite',
       turn: 'turnAnimation 7s ease-in-out infinite',
       bounce: 'bounceAnimation 1s linear infinite',
+      slide: 'slideEffect 19s linear infinite',
       back1: 'backAnimation 9s linear infinite',
       back2: 'backAnimation 10s linear infinite',
       back3: 'backAnimation 6s linear infinite',

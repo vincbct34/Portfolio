@@ -57,5 +57,8 @@
     "success": "Your message has been sent successfully!",
     "errorTitle": "Error!",
     "error": "An error occurred, please try again."
+  },
+  "experience": {
+    "skills": "My skills"
   }
 }

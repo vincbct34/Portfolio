@@ -1,0 +1,86 @@
+/* This is the CSS file for the Carousel, as it is too complex to be designed using Tailwind CSS */
+
+.container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 1500px;
+  mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+  z-index: 2;
+}
+
+h1 {
+  font-size: 2vh;
+  margin-bottom: 2vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  height: 20vh;
+  gap: 1vh;
+  position: relative;
+}
+
+.card img {
+  height: 40%;
+  width: 60%;
+  border-radius: 10%;
+  transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+}
+
+.card .title {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card img:hover + .title,
+.card .title:hover {
+  opacity: 1;
+}
+
+.track {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 200%;
+  height: 10vh;
+  animation: slide 19s linear infinite;
+}
+
+.track.paused {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 800px;
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  }
+
+  .card img {
+    height: 100%;
+    width: 100%;
+  }
+}

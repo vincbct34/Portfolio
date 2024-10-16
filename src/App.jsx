@@ -3,15 +3,14 @@ import { useState } from "react";
 // Importing pages
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-// import Experience from "./pages/Experience/Experience.jsx";
+import Experience from "./pages/Experience.jsx";
 import Contact from "./pages/Contact.jsx";
-// import Signup from './components/Signup/Signup';
-// import Login from './components/Login/Login';
 
 // Importing components
 import { Header } from "./components/Header.jsx";
 import { BackgroundItem } from "./components/BackgroundItem.jsx";
 import { SocialMedias } from "./components/SocialMedias.jsx";
+import { InfiniteCarousel } from "./components/InfiniteCarousel/InfiniteCarousel.jsx";
 
 /**
  * @component App
@@ -49,7 +48,7 @@ export const App = () => {
       <div className="z-10">
         <Home />
         <About />
-        {/* <Experience /> */}
+        <Experience />
         <Contact />
       </div>
     </div>

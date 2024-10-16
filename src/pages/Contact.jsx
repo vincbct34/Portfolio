@@ -1,9 +1,23 @@
+/**
+ * @file Contact.jsx - This component handles user inquiries via a contact form.
+ * The form allows users to submit their contact information and message, which is then sent via email.
+ * The component includes form validation, loading state management, and error handling.
+ * 
+ * @author Vincent Bichat <vincent260705@gmail.com>
+ */
+
 import React, { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+
+// Importing the EmailJS library for sending emails
+import emailjs from '@emailjs/browser';
+
+// Importing the SweetAlert2 library for notifications
 import Swal from 'sweetalert2';
+
+// Importing the form components
 import TextInput from '../components/TextInput';
 import Textarea from '../components/TextArea';
-import emailjs from '@emailjs/browser';
-import { useTranslation } from 'react-i18next';
 
 /**
  * Contact component handles user inquiries via a contact form.
