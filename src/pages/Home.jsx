@@ -13,7 +13,6 @@ import profileImage from './../assets/images/me.png';
 import viteLogo from './../assets/images/vite.svg';
 import reactLogo from './../assets/images/react.svg';
 import tailwindLogo from './../assets/images/tailwind.svg';
-import googleCloudLogo from './../assets/images/google-cloud.svg';
 
 /**
  * @component TechItem
