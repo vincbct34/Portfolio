@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import TextInput from '../components/TextInput';
 import Textarea from '../components/TextArea';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Contact component handles user inquiries via a contact form.
@@ -10,6 +11,7 @@ import emailjs from '@emailjs/browser';
  * @returns {JSX.Element} The Contact component.
  */
 const Contact = () => {
+  const { t } = useTranslation('global');
   const form = useRef(); // Ref to the form element
   const [errors, setErrors] = useState({}); // State to hold form validation errors
   const [loading, setLoading] = useState(false); // State for loading indicator
@@ -75,8 +77,8 @@ const Contact = () => {
           console.log('SUCCESS!', response.status, response.text);
           Swal.fire({
             icon: 'success',
-            title: 'Success',
-            text: 'Your message has been sent successfully',
+            title: t('contact.successTitle'),
+            text: t('contact.success'),
           });
           form.current.reset(); // Reset form after successful submission
         },
@@ -84,8 +86,8 @@ const Contact = () => {
           console.log('FAILED...', error);
           Swal.fire({
             icon: 'error',
-            title: 'Error',
-            text: 'An error occurred while sending the message',
+            title: t('contact.errorTitle'),
+            text: t('contact.error'),
           });
         }
       )
@@ -98,31 +100,31 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full bg-light-first dark:bg-dark-first text-dark-first dark:text-light-first py-20">
       <div className="flex w-full flex-col justify-center items-center">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Me</h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-800">{t('contact.title')}</h2>
         <form ref={form} onSubmit={handleSubmit} className="flex flex-col w-3/4 md:w-1/2">
           <TextInput
             id="firstName"
-            label="First Name"
-            placeholder="Enter your first name"
+            label={t('contact.input.firstName')}
+            placeholder={t('contact.placeholder.firstName')}
             error={errors.firstName}
           />
           <TextInput
             id="lastName"
-            label="Last Name"
-            placeholder="Enter your name"
+            label={t('contact.input.lastName')}
+            placeholder={t('contact.placeholder.lastName')}
             error={errors.lastName}
           />
           <TextInput
             id="email"
             label="Email"
             type="email"
-            placeholder="Enter your email"
+            placeholder={t('contact.placeholder.email')}
             error={errors.email}
           />
           <Textarea
             id="message"
             label="Message"
-            placeholder="Enter your message"
+            placeholder={t('contact.placeholder.message')}
             error={errors.message}
           />
           {!loading ? (
@@ -131,13 +133,13 @@ const Contact = () => {
               className="flex justify-center items-center text-lg bg-light-first dark:bg-dark-first before:absolute before:w-full before:transition-all before:duration-700 before:-left-full before:hover:left-0 before:rounded-full before:bg-dark-first dark:before:bg-light-first hover:text-light-first hover:dark:text-dark-first before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full"
               disabled={loading} // Disable button while loading
             >
-              Send
+              {t('contact.button')}
             </button>
           ) : (
             <div class="flex flex-row justify-center items-center gap-2">
-              <div class="w-4 h-4 rounded-full bg-dark-first animate-bounce [animation-delay:.7s]"></div>
-              <div class="w-4 h-4 rounded-full bg-dark-first animate-bounce [animation-delay:.3s]"></div>
-              <div class="w-4 h-4 rounded-full bg-dark-first animate-bounce [animation-delay:.7s]"></div>
+              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
+              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.3s]"></div>
+              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
             </div>
           )}
         </form>

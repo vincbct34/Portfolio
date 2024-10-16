@@ -39,5 +39,23 @@
     "internship": "Juillet 2024",
     "newPortfolio": "Fin 2024",
     "future": "2025 vers l'infini et au-delà !"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "input": {
+      "firstName": "Prénom",
+      "lastName": "Nom"
+    },
+    "placeholder": {
+      "firstName": "Entrez votre prénom",
+      "lastName": "Entrez votre nom",
+      "email": "Entrez votre email",
+      "message": "Entrez votre message"
+    },
+    "button": "Envoyer",
+    "successTitle": "Message envoyé !",
+    "success": "Votre message a bien été envoyé !",
+    "errorTitle": "Erreur !",
+    "error": "Une erreur est survenue, veuillez réessayer."
   }
 }

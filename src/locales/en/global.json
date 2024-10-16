@@ -39,5 +39,23 @@
     "internship": "July 2024",
     "newPortfolio": "Late 2024",
     "future": "2025 to the infinity, and beyond!"
+  },
+  "contact": {
+    "title": "Contact me",
+    "input": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    },
+    "placeholder": {
+      "firstName": "Enter your first name",
+      "lastName": "Enter your last name",
+      "email": "Enter your email",
+      "message": "Enter your message"
+    },
+    "button": "Send",
+    "successTitle": "Message sent!",
+    "success": "Your message has been sent successfully!",
+    "errorTitle": "Error!",
+    "error": "An error occurred, please try again."
   }
 }
