@@ -18,8 +18,8 @@ import rpgPreview from '../assets/images/rpgPreview.png';
 import settingupPreview from '../assets/images/settingupPreview.png';
 
 // Importing PDF files for download
-import cvPdf from '../assets/files/cv.pdf';
-import degreePdf from '../assets/files/degree.pdf';
+import cvPdf from '../assets/files/Cv.pdf';
+import degreePdf from '../assets/files/Degree.pdf';
 
 // Importing icons for navigation
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
