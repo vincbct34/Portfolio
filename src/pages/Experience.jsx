@@ -140,6 +140,8 @@ const Experience = () => {
         <a
           href="https://github.com/vincbct34"
           className="text-2xl font-bold my-10 text-center transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {t('experience.moreProjects')}
         </a>
