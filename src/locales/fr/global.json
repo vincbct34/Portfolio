@@ -63,6 +63,25 @@
     "documents": "Quelques documents...",
     "download": "Télécharger le",
     "resume": "CV",
-    "degree": "diplôme"
+    "degree": "diplôme",
+    "projects": "Projets",
+    "cards": {
+      "memory": "Gestion mémoire",
+      "graphical": "Graphique",
+      "portfolio": {
+        "description": "Le portfolio que vous êtes en train de visiter, créé avec React, Vite et TailwindCSS."
+      },
+      "minishell": {
+        "description": "Une reproduction du TCSH, créée avec C."
+      },
+      "rpg": {
+        "description": "Un jeu de rôle créé avec la librairie graphique CSFML, en C."
+      },
+      "settingUp": {
+        "description": "Un projet d'algorithmie, pour trouver le plus grand carré dans une carte, créé avec C."
+      }
+    },
+    "seeProject": "Voir le projet",
+    "moreProjects": "Plus de projets ici !"
   }
 }

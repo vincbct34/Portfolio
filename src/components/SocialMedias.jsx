@@ -26,7 +26,7 @@ export const SocialMedias = () => {
         href="https://github.com/vincbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-16 scale-150" : ""} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-16 scale-150 opacity-100" : "opacity-0"} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
         <FaGithub size={24} />
       </a>
@@ -34,7 +34,7 @@ export const SocialMedias = () => {
         href="https://facebook.com/vincentbct34" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "-translate-y-16 scale-150" : ""} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "-translate-y-16 scale-150 opacity-100" : "opacity-0"} hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
         <FaFacebook size={24} />
       </a>
@@ -42,12 +42,12 @@ export const SocialMedias = () => {
         href="https://linkedin.com/in/vincent-bichat" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-12 -translate-y-12 scale-150" : ""} transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
+        className={`fixed bottom-5 left-5 transition-all duration-300 ease-in-out dark:text-light-first z-10 ${active ? "translate-x-12 -translate-y-12 scale-150 opacity-100" : "opacity-0"} transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo`}
       >
         <FaLinkedin size={24} />
       </a>
       <FaExternalLinkAlt 
-        className="fixed bottom-5 left-5 cursor-pointer bg-light-first dark:bg-dark-first dark:text-light-first z-20" 
+        className="fixed bottom-5 left-5 cursor-pointer dark:text-light-first z-20" 
         alt="Links" 
         onClick={handleLinkClick} 
         size={24}

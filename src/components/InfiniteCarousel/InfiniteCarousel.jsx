@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { cardDetails } from "./CarouselConfig";
 import CarouselItem from "./CarouselItem";
 import styles from "./InfiniteCarousel.module.css";
@@ -38,3 +39,8 @@ export const InfiniteCarousel = ({title}) => {
     </>
   );
 }
+
+// Prop types for the InfiniteCarousel component
+InfiniteCarousel.propTypes = {
+  title: PropTypes.string.isRequired
+};

@@ -47,7 +47,7 @@ const About = () => {
           <div className="flex flex-col justify-center items-center text-center gap-10">
             <div className="flex items-center justify-center w-20 h-20 mt-10 rounded-full border-4 border-dark-third group transition-all duration-300 transform hover:w-64 hover:h-20 cursor-default">
               <TbCalendarTime size={50} className="transition-transform duration-300 group-hover:translate-x-[-70px]" />
-              <p className="absolute right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Timeline</p>
+              <p className="absolute right-8 opacity-0 text-xl font-bold group-hover:opacity-100 transition-opacity duration-200">Timeline</p>
             </div>
             {/* Timeline items displaying important life events */}
             <TimelineItem side="left" date={t("timelineDate.birth")} text={t("timeline.birth")} logo={<FaBaby size={35}/>} logoAlt={"Baby"} />

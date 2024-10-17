@@ -10,7 +10,6 @@ import Contact from "./pages/Contact.jsx";
 import { Header } from "./components/Header.jsx";
 import { BackgroundItem } from "./components/BackgroundItem.jsx";
 import { SocialMedias } from "./components/SocialMedias.jsx";
-import { InfiniteCarousel } from "./components/InfiniteCarousel/InfiniteCarousel.jsx";
 
 /**
  * @component App

@@ -6,7 +6,7 @@
  * @author Vincent Bichat <vincent260705@gmail.com>
  */
 
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Importing the EmailJS library for sending emails
@@ -150,10 +150,10 @@ const Contact = () => {
               {t('contact.button')}
             </button>
           ) : (
-            <div class="flex flex-row justify-center items-center gap-2">
-              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
-              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.3s]"></div>
-              <div class="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
+            <div className="flex flex-row justify-center items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.3s]"></div>
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
             </div>
           )}
         </form>
