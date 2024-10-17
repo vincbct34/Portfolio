@@ -43,7 +43,7 @@ export const ProjectCard = ({ title, image, description, skills, link }) => {
   const { t } = useTranslation('global');
 
   return (
-    <div className="w-full max-w-sm p-6 bg-gradient-light dark:bg-gradient-dark dark:bg-dark-second rounded transition-all duration-300 ease-in-out hover:shadow-darkProfileShadow hover:dark:shadow-lightProfileShadow transform hover:scale-105">
+    <div className="w-full max-w-sm p-6 bg-gradient-light dark:bg-gradient-dark rounded transition-all duration-300 ease-in-out hover:shadow-darkProfileShadow hover:dark:shadow-lightProfileShadow transform hover:scale-105">
       {/* Project image */}
       <img src={image} alt={title} className="w-full max-h-40 object-scale-down rounded-md transition-all duration-700 ease-in-out hover:max-h-64" />
       {/* Project content */}
