@@ -59,6 +59,10 @@
     "error": "An error occurred, please try again."
   },
   "experience": {
-    "skills": "My skills"
+    "skills": "My skills",
+    "documents": "Some documents...",
+    "download": "Download the",
+    "resume": "resume",
+    "degree": "degree"
   }
 }

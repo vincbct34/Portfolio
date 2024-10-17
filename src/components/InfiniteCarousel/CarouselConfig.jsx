@@ -8,6 +8,9 @@ import officeLogo from "./../../assets/images/office.svg";
 import ubuntuLogo from "./../../assets/images/ubuntu.svg";
 import vscodeLogo from "./../../assets/images/vscode.svg";
 import jsLogo from "./../../assets/images/js.svg";
+import notionLogo from "./../../assets/images/notion.svg";
+import figmaLogo from "./../../assets/images/figma.svg";
+import tailwindLogo from "./../../assets/images/tailwind.svg";
 
 // Object containing the details of the cards displayed in the carousel
 export const cardDetails = {
@@ -34,17 +37,17 @@ export const cardDetails = {
       title: "React",
       docLink: "https://react.dev/"
   },
-
+  
   4: {
-      imgUrl: cLogo,
-      title: "C",
-      docLink: "https://en.wikipedia.org/wiki/C_(programming_language)"
+    imgUrl: pythonLogo,
+    title: "Python",
+    docLink: "https://docs.python.org/3/"
   },
 
   5: {
-      imgUrl: pythonLogo,
-      title: "Python",
-      docLink: "https://docs.python.org/3/"
+      imgUrl: cLogo,
+      title: "   C   ",
+      docLink: "https://en.wikipedia.org/wiki/C_(programming_language)"
   },
 
   6: {
@@ -70,4 +73,22 @@ export const cardDetails = {
       title: "JavaScript",
       docLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
+
+    10: {
+        imgUrl: notionLogo,
+        title: "Notion",
+        docLink: "https://www.notion.so/"
+    },
+
+    11: {
+        imgUrl: figmaLogo,
+        title: "Figma",
+        docLink: "https://www.figma.com/"
+    },
+
+    12: {
+        imgUrl: tailwindLogo,
+        title: "Tailwind",
+        docLink: "https://tailwindcss.com/"
+    }
 }

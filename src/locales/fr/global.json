@@ -59,6 +59,10 @@
     "error": "Une erreur est survenue, veuillez réessayer."
   },
   "experience": {
-    "skills": "Mes compétences"
+    "skills": "Mes compétences",
+    "documents": "Quelques documents...",
+    "download": "Télécharger le",
+    "resume": "CV",
+    "degree": "diplôme"
   }
 }

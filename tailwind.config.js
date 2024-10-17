@@ -27,6 +27,10 @@ export default {
         500: '#f56565',
       }
     },
+    backgroundImage: {
+      'gradient-light': 'linear-gradient(to top, rgb(var(--light-first-clr)), rgb(var(--light-second-clr)))',
+      'gradient-dark': 'linear-gradient(to top, rgb(var(--dark-first-clr)), rgb(var(--dark-second-clr)))',
+    },
     keyframes: {
       WaveAnimation: {
         '0%': { transform: 'rotate(0deg) scale(1)' },
@@ -58,8 +62,8 @@ export default {
       },
     },
     animation: {
-      wave: 'WaveAnimation 10s ease-in-out infinite',
-      turn: 'turnAnimation 7s ease-in-out infinite',
+      wave: 'WaveAnimation 2s ease-in-out infinite',
+      turn: 'turnAnimation 5s ease-in-out infinite',
       bounce: 'bounceAnimation 1s linear infinite',
       slide: 'slideEffect 19s linear infinite',
       back1: 'backAnimation 9s linear infinite',

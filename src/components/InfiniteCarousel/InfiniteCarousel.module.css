@@ -6,15 +6,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60%;
+  height: 100%;
   width: 1500px;
   mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
   z-index: 2;
 }
 
 h1 {
-  font-size: 2vh;
-  margin-bottom: 2vh;
+  font-size: 2em;
+  margin-top: 5vh;
 }
 
 .card {
@@ -24,13 +24,13 @@ h1 {
   align-items: center;
   width: 20vh;
   height: 20vh;
-  gap: 1vh;
+  gap: 3vh;
   position: relative;
 }
 
 .card img {
-  height: 40%;
-  width: 60%;
+  height: auto;
+  width: auto;
   border-radius: 10%;
   transition: 0.3s ease-in-out;
 }
@@ -40,7 +40,12 @@ h1 {
 }
 
 .card .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
+  width: 7vh;
+  height: 1vh;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -56,7 +61,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 200%;
-  height: 10vh;
+  height: 20vh;
   animation: slide 19s linear infinite;
 }
 
@@ -77,6 +82,16 @@ h1 {
   .container {
     width: 800px;
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 10vh;
+    position: relative;
   }
 
   .card img {
