@@ -97,7 +97,7 @@ const Experience = () => {
         <InfiniteCarousel title={t('experience.skills')} />
       </div>
       <div className="flex flex-col justify-center items-center pb-10">
-        <h2 className="text-4xl font-bold my-10">{t('experience.documents')}</h2>
+        <h2 className="text-xl font-bold my-10">{t('experience.documents')}</h2>
         <div className="flex justify-center items-center">
           {/* Navigation buttons for images */}
           <button onClick={prevImage} className="p-10">
