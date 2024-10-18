@@ -100,7 +100,7 @@ const Experience = () => {
         <h2 className="text-xl font-bold my-10">{t('experience.documents')}</h2>
         <div className="flex justify-center items-center">
           {/* Navigation buttons for images */}
-          <button onClick={prevImage} className="p-10">
+          <button onClick={prevImage} className="pr-10">
             <FaArrowAltCircleLeft size={40} className="transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo" />
           </button>
           {/* Displaying current image with fading effect */}
@@ -109,7 +109,7 @@ const Experience = () => {
             alt={`Image ${currentIndex + 1}`}
             className={`w-1/2 object-contain transition-opacity duration-200 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
           />
-          <button onClick={nextImage} className="p-10">
+          <button onClick={nextImage} className="pl-10">
             <FaArrowAltCircleRight size={40} className="transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo" />
           </button>
         </div>
