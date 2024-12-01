@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import { FaReact, FaMemory } from 'react-icons/fa';
+import { FaReact, FaMemory, FaPython } from 'react-icons/fa';
 import { TbBrandCoinbase } from 'react-icons/tb';
 import { SiPowershell, SiGraphite } from 'react-icons/si';
 import { DiGhostSmall } from 'react-icons/di';
-import { SiTailwindcss, SiVite } from 'react-icons/si';
+import { SiTailwindcss, SiVite, SiSqlite } from 'react-icons/si';
+import { IoLogoElectron } from "react-icons/io5";
 import { useTranslation } from 'react-i18next';
 
 /**
@@ -12,6 +13,9 @@ import { useTranslation } from 'react-i18next';
  */
 const icons = {
   React: <FaReact />,
+  Electron: <IoLogoElectron />,
+  SQLite: <SiSqlite />,
+  Python: <FaPython />,
   'Tailwind CSS': <SiTailwindcss />,
   Vite: <SiVite />,
   C: <TbBrandCoinbase />,
@@ -60,14 +64,18 @@ export const ProjectCard = ({ title, image, description, skills, link }) => {
           ))}
         </div>
         {/* Button/Link to project */}
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo"
-        >
-          {t('experience.seeProject')} {/* Translated text for project link */}
-        </a>
+        {link ? (
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded transition-all duration-300 hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo"
+            >
+              {t('experience.seeProject')}
+            </a>
+        ) : (
+            <p className="text-red-500 font-bold">{t('experience.privateProject')}</p>
+        )}
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ import portfolioPreview from '../assets/images/portfolioPreview.png';
 import minishellPreview from '../assets/images/minishellPreview.png';
 import rpgPreview from '../assets/images/rpgPreview.png';
 import settingupPreview from '../assets/images/settingupPreview.png';
+import publipostagePreview from '../assets/images/publipostagePreview.png';
 
 // Importing PDF files for download
 import cvPdf from '../assets/files/Cv.pdf';
@@ -65,6 +66,13 @@ const Experience = () => {
       description: t('experience.cards.settingUp.description'),
       skills: ['C', 'Parsing'],
       link: 'https://github.com/MyEPITECH-Tek1/EPITECH-Tek1/tree/main/Mandatory%20Units/Elementary%20Programming%20in%20C/Setting%20Up'
+    },
+    {
+        title: t('experience.cards.publipostage.title'),
+        image: publipostagePreview,
+        description: t('experience.cards.publipostage.description'),
+        skills: ['Electron', 'React', 'Vite', 'SQLite', 'Python'],
+        link: ''
     }
   ];
 

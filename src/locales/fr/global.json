@@ -79,9 +79,14 @@
       },
       "settingUp": {
         "description": "Un projet d'algorithmie, pour trouver le plus grand carré dans une carte, créé avec C."
+      },
+      "publipostage": {
+        "title": "Publipostage",
+        "description": "Un projet réalisé dans le cadre de mon stage, pour automatiser l'envoi de courriers en masse."
       }
     },
     "seeProject": "Voir le projet",
+    "privateProject": "Code source privé",
     "moreProjects": "Plus de projets ici !"
   }
 }

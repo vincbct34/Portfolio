@@ -79,9 +79,14 @@
       },
       "settingUp": {
         "description": "An algorithmic project, to find the biggest square in a map, created with C."
+      },
+      "publipostage": {
+        "title": "Mailing",
+        "description": "A project carried out during my internship, to automate the sending of mass mail."
       }
     },
     "seeProject": "See the project",
+    "privateProject": "Source code private",
     "moreProjects": "More projects here!"
   }
 }
