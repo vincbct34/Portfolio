@@ -6,7 +6,7 @@
  * @author Vincent Bichat <vincent260705@gmail.com>
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Importing images for experience previews
@@ -79,9 +79,20 @@ const Experience = () => {
   // State management for current index and fading effect
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   // Function to navigate to the previous image
   const prevImage = () => {
+    setIsLoading(true);
     setIsFading(true);
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -91,6 +102,7 @@ const Experience = () => {
 
   // Function to navigate to the next image
   const nextImage = () => {
+    setIsLoading(true);
     setIsFading(true);
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -108,17 +120,25 @@ const Experience = () => {
         <h2 className="text-xl font-bold my-10">{t('experience.documents')}</h2>
         <div className="flex justify-center items-center">
           {/* Navigation buttons for images */}
-          <button onClick={prevImage} className="pr-10">
-            <FaArrowAltCircleLeft size={40} className="transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo" />
+          <button onClick={prevImage} className="pr-10" disabled={isLoading}>
+            <FaArrowAltCircleLeft size={40} className={`transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo ${isLoading ? 'opacity-50' : 'opacity-100'}`} />
           </button>
           {/* Displaying current image with fading effect */}
-          <img
-            src={images[currentIndex]}
-            alt={`Image ${currentIndex + 1}`}
-            className={`w-1/2 object-contain transition-opacity duration-200 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
-          />
-          <button onClick={nextImage} className="pl-10">
-            <FaArrowAltCircleRight size={40} className="transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo" />
+          {isLoading ? (
+            <div className="flex flex-row justify-center items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.3s]"></div>
+              <div className="w-4 h-4 rounded-full bg-dark-first dark:bg-light-first animate-bounce [animation-delay:.7s]"></div>
+            </div>
+          ) : (
+            <img
+              src={images[currentIndex]}
+              alt={`Image ${currentIndex + 1}`}
+              className={`w-1/2 object-contain transition-opacity duration-200 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
+            />
+          )}
+          <button onClick={nextImage} className="pl-10" disabled={isLoading}>
+            <FaArrowAltCircleRight size={40} className={`transition-all duration-300 ease-in-out hover:drop-shadow-darkLogo dark:hover:drop-shadow-lightLogo ${isLoading ? 'opacity-50' : 'opacity-100'}`} />
           </button>
         </div>
         {/* Download button for the current PDF */}

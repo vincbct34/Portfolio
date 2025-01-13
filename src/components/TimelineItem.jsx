@@ -88,21 +88,21 @@ export const TimelineItem = ({ side, date, text, logo }) => {
                 <p className="text-xs">{date}</p>
               </div>
               <div
-                className={`flex flex-col w-5/6 items-start transition-all duration-300 ${
+                className={`flex flex-col w-5/6 -ml-10 items-start transition-all duration-300 ${
                   inView ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <p className="text-lg">{text}</p>
+                <p className="text-lg text-left">{text}</p>
               </div>
             </div>
           ) : side === 'right' ? ( // Right side layout
             <div ref={ref} className="flex flex-row w-full justify-end items-center">
               <div
-                className={`flex flex-col w-5/6 items-end transition-all duration-300 ${
+                className={`flex flex-col w-5/6 -mr-10 items-end transition-all duration-300 ${
                   inView ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <p className="text-lg">{text}</p>
+                <p className="text-lg text-right">{text}</p>
               </div>
               <div className="flex flex-col w-1/6 justify-center items-center gap-2">
                 <div
@@ -128,11 +128,11 @@ export const TimelineItem = ({ side, date, text, logo }) => {
                 <p className="text-xs">{date}</p>
               </div>
               <div
-                className={`flex flex-col w-5/6 items-start transition-all duration-300 ${
+                className={`flex flex-col w-5/6 -ml-2 items-start transition-all duration-300 ${
                   inView ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <p className="text-lg">{text}</p>
+                <p className="text-lg text-left">{text}</p>
               </div>
             </div>
           )}
