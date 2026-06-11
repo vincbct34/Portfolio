@@ -1,0 +1,298 @@
+body {
+  background: #0d0c0b;
+  color: #ede8e0;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+}
+::selection {
+  background: #c8a96a;
+  color: #0d0c0b;
+}
+.site-header {
+  padding: 2.2rem 6vw;
+}
+@media (max-width: 600px) {
+  .site-header {
+    padding: 1.6rem 6vw;
+  }
+  .menu {
+    gap: 1.3rem;
+  }
+  .menu a {
+    letter-spacing: 0.2em;
+  }
+  .lang-toggle {
+    letter-spacing: 0.2em;
+  }
+}
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+.menu {
+  gap: 3rem;
+}
+.menu a {
+  color: rgba(237, 232, 224, 0.45);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+.menu a:hover,
+.menu a[aria-current="true"] {
+  color: #c8a96a;
+}
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6vh 6vw;
+}
+.kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c8a96a;
+  margin-bottom: 3rem;
+}
+.headline {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(2.8rem, 8vw, 7rem);
+  line-height: 1.06;
+  max-width: 16ch;
+}
+.headline em {
+  font-style: italic;
+  color: #c8a96a;
+}
+.tagline {
+  margin-top: 3rem;
+  color: rgba(237, 232, 224, 0.45);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  max-width: 50ch;
+  line-height: 2;
+}
+.actions {
+  margin-top: 3rem;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.actions a {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(200, 169, 106, 0.4);
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+.actions a:hover {
+  color: #c8a96a;
+  border-color: #c8a96a;
+}
+.work,
+.about,
+.contact {
+  padding: 12vh 6vw;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(237, 232, 224, 0.45);
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(200, 169, 106, 0.22);
+}
+.projects {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(200, 169, 106, 0.22);
+}
+.project:first-child {
+  border-top: 1px solid rgba(200, 169, 106, 0.22);
+}
+.num {
+  display: none;
+}
+.project h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+  transition:
+    color 0.5s,
+    letter-spacing 0.5s;
+}
+.project:hover h3 {
+  color: #c8a96a;
+  letter-spacing: 0.03em;
+}
+.project p {
+  color: rgba(237, 232, 224, 0.45);
+  font-size: 0.9rem;
+  line-height: 1.9;
+  text-align: right;
+}
+.tags {
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+  justify-content: flex-end;
+  grid-column: 2;
+}
+.tags span {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c8a96a;
+}
+.statement {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  line-height: 1.55;
+  max-width: 34ch;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+}
+.about-body {
+  margin: 2.5rem auto 0;
+  max-width: 58ch;
+  color: rgba(237, 232, 224, 0.55);
+  line-height: 2;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.about-body p + p {
+  margin-top: 1.2rem;
+}
+.contact {
+  text-align: center;
+}
+.mail {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(1.7rem, 4.5vw, 3.4rem);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+.mail:hover {
+  color: #c8a96a;
+  border-color: #c8a96a;
+}
+.site-footer {
+  padding: 2.4rem 6vw;
+  border-top: 1px solid rgba(200, 169, 106, 0.22);
+  font-size: 0.66rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(237, 232, 224, 0.45);
+}
+.lang-toggle {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(237, 232, 224, 0.45);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(200, 169, 106, 0.25);
+  transition:
+    color 0.5s,
+    border-color 0.5s;
+}
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  color: #c8a96a;
+  border-bottom-color: #c8a96a;
+}
+
+:root {
+  --t-bg: #0d0c0b;
+  --t-fg: #ede8e0;
+  --t-accent: #c8a96a;
+}
+
+/* ============ CUSTOM CURSOR (spotlight ring, fine pointers only) ============ */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor:
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="%230D0C0B" stroke-width="3.5"/><circle cx="10" cy="10" r="7" fill="none" stroke="%23C8A96A" stroke-width="1.5"/></svg>')
+        10 10,
+      auto;
+  }
+  a,
+  button,
+  .theme-index .spine {
+    cursor:
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="%230D0C0B" stroke-width="5"/><circle cx="12" cy="12" r="9" fill="none" stroke="%23C8A96A" stroke-width="3"/><circle cx="12" cy="12" r="2" fill="%23C8A96A" stroke="%230D0C0B" stroke-width="1" paint-order="stroke"/></svg>')
+        12 12,
+      pointer;
+  }
+}
+@media (max-width: 760px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project p {
+    text-align: left;
+  }
+  .tags {
+    justify-content: flex-start;
+    grid-column: 1;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+  .kicker {
+    margin-bottom: 2rem;
+  }
+  .tagline,
+  .actions {
+    margin-top: 2.2rem;
+  }
+  .work,
+  .about,
+  .contact {
+    padding: 8vh 6vw;
+  }
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+  .project {
+    padding: 2.2rem 0;
+  }
+}

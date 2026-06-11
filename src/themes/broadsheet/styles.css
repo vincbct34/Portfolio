@@ -1,0 +1,307 @@
+body {
+  background: #f7f4ec;
+  color: #191714;
+  font-family: "Source Serif 4", serif;
+}
+::selection {
+  background: #191714;
+  color: #f7f4ec;
+}
+.site-header {
+  flex-direction: column;
+  gap: 0;
+  padding: 1.8rem 3vw 0;
+  max-width: 1180px;
+  margin: 0 auto;
+  border-bottom: 3px double #191714;
+}
+section {
+  scroll-margin-top: 11rem;
+}
+@media (max-width: 600px) {
+  .site-header {
+    position: static;
+    padding: 1.2rem 3vw 0;
+  }
+  .menu a {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+  .lang-toggle {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+  section {
+    scroll-margin-top: 1.5rem;
+  }
+}
+.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  text-align: center;
+  line-height: 1.1;
+  padding-bottom: 1rem;
+}
+.site-header nav {
+  width: 100%;
+  border-top: 1px solid #191714;
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  gap: 0;
+}
+.menu a {
+  font-family: "Oswald";
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.8rem;
+  border-right: 1px solid rgba(25, 23, 20, 0.2);
+  display: block;
+}
+.menu li:first-child a {
+  border-left: 1px solid rgba(25, 23, 20, 0.2);
+}
+.menu a:hover,
+.menu a[aria-current="true"] {
+  background: #191714;
+  color: #f7f4ec;
+}
+.hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.4rem 3vw;
+  border-bottom: 1px solid #191714;
+}
+.kicker {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #5e594f;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.4vw, 3.4rem);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  max-width: 26ch;
+}
+.tagline {
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 70ch;
+  border-top: 1px solid rgba(25, 23, 20, 0.25);
+  border-bottom: 1px solid rgba(25, 23, 20, 0.25);
+  padding: 1rem 0;
+}
+.actions {
+  margin-top: 1.6rem;
+  gap: 1.2rem;
+}
+.actions a {
+  font-family: "Oswald";
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid #191714;
+  transition: all 0.2s;
+}
+.actions a:hover {
+  background: #a41e22;
+  color: #f7f4ec;
+  border-color: #a41e22;
+}
+.work,
+.about,
+.contact {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.6rem 3vw;
+  border-bottom: 1px solid #191714;
+}
+.section-title {
+  font-family: "Oswald";
+  font-size: 0.78rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.projects {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 0;
+}
+.project {
+  padding: 1.6rem 1.5rem 2rem;
+  border-right: 1px solid rgba(25, 23, 20, 0.25);
+  transition: background 0.2s;
+}
+.project:last-child {
+  border-right: none;
+}
+.project:hover {
+  background: #fff;
+}
+.num {
+  display: none;
+}
+.media {
+  height: auto;
+  aspect-ratio: 16/10;
+  margin-bottom: 1rem;
+  filter: grayscale(0.3) contrast(1.05);
+}
+.media img {
+  object-fit: cover;
+}
+.media-1 {
+  background: linear-gradient(135deg, #3e3a33, #8e2de2);
+}
+.media-2 {
+  background: linear-gradient(135deg, #1d3557, #2ec4b6);
+}
+.media-3 {
+  background: linear-gradient(135deg, #9d0208, #ffba08);
+}
+.media-4 {
+  background: linear-gradient(135deg, #2ec4b6, #9d0208);
+}
+.media-5 {
+  background: linear-gradient(135deg, #8e2de2, #1d3557);
+}
+.media-6 {
+  background: linear-gradient(135deg, #ffba08, #3e3a33);
+}
+.project h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.project:hover h3 {
+  text-decoration: underline;
+}
+.project p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.tags {
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+.tags span {
+  font-family: "Oswald";
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a41e22;
+}
+.statement {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+  line-height: 1.5;
+  max-width: 44ch;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+}
+.about-body {
+  margin: 1.8rem auto 0;
+  max-width: 68ch;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+.about-body p + p {
+  margin-top: 0.4rem;
+  text-indent: 1.4em;
+}
+.contact {
+  text-align: center;
+}
+.mail {
+  display: inline-block;
+  font-family: "Oswald";
+  font-size: clamp(0.95rem, 2.4vw, 1.4rem);
+  letter-spacing: 0.12em;
+  color: #f7f4ec;
+  background: #191714;
+  padding: 1rem 2.2rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.mail:hover {
+  background: #a41e22;
+}
+.site-footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.2rem 3vw 2.6rem;
+  border-top: 3px double #191714;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #5e594f;
+}
+.lang-toggle {
+  font-family: "Oswald";
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #191714;
+  padding: 0.7rem 1.8rem;
+  display: block;
+  border-left: 1px solid rgba(25, 23, 20, 0.2);
+  transition: all 0.2s;
+}
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  background: #191714;
+  color: #f7f4ec;
+}
+:root {
+  --t-bg: #f7f4ec;
+  --t-fg: #191714;
+  --t-accent: #a41e22;
+}
+
+/* ============ CUSTOM CURSOR (ink dot / loupe, fine pointers only) ============ */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor:
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="4" fill="%23A41E22" stroke="%23F7F4EC" stroke-width="1.5" paint-order="stroke"/></svg>')
+        6 6,
+      auto;
+  }
+  a,
+  button,
+  .theme-index .spine {
+    cursor:
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><circle cx="9" cy="9" r="7" fill="none" stroke="%23F7F4EC" stroke-width="4"/><line x1="14" y1="14" x2="20" y2="20" stroke="%23F7F4EC" stroke-width="4"/><circle cx="9" cy="9" r="7" fill="none" stroke="%23A41E22" stroke-width="2"/><line x1="14" y1="14" x2="20" y2="20" stroke="%23A41E22" stroke-width="2"/></svg>')
+        9 9,
+      pointer;
+  }
+}
+@media (max-width: 760px) {
+  .project {
+    border-right: none;
+    border-bottom: 1px solid rgba(25, 23, 20, 0.25);
+  }
+  .about-body {
+    text-align: left;
+  }
+  .about-body p + p {
+    text-indent: 0;
+    margin-top: 0.8rem;
+  }
+}

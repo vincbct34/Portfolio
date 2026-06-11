@@ -1,0 +1,313 @@
+/* ============ BASE / SKELETON (theme-agnostic) ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease;
+}
+a {
+  color: inherit;
+}
+
+/* ============ FOCUS STATES (theme-agnostic, uses each theme's --t-accent) ============ */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--t-accent, #4d90fe);
+  outline-offset: 2px;
+}
+
+/* ============ SCROLLBAR (theme-agnostic, uses each theme's vars) ============ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--t-accent, #888) var(--t-bg, #fff);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--t-bg, #fff);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--t-accent, #888);
+  border-radius: 6px;
+  border: 2px solid var(--t-bg, #fff);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--t-fg, #111);
+}
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 0.75rem;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: var(--t-bg, #fff);
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+.menu a {
+  text-decoration: none;
+}
+
+/* ============ SKIP LINK (theme-agnostic, uses each theme's vars) ============ */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  z-index: 2000;
+  background: var(--t-bg, #fff);
+  color: var(--t-fg, #111);
+  border: 1px solid var(--t-accent, #888);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus-visible {
+  top: 0.5rem;
+}
+.hero .actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.actions a {
+  text-decoration: none;
+  display: inline-block;
+}
+.projects {
+  display: grid;
+}
+.project {
+  text-decoration: none;
+  display: block;
+}
+.project .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ============ PROJECT MEDIA (theme-agnostic image box) ============ */
+.media {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background: var(--t-accent, #ccc);
+}
+.media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.site-footer a {
+  text-decoration: none;
+}
+section {
+  scroll-margin-top: 6rem;
+}
+
+/* ============ THEME PICKER — "spine index" (persistent UI) ============ */
+/* A vertical shelf of theme-colored spines on the right edge, like a book's
+   color-coded edition tabs. Each spine is filled with that theme's own
+   swatch; the picker's own chrome (label flag, active marker, focus ring)
+   uses the *active* theme's --t-bg/--t-fg/--t-accent, so it reads as part
+   of whichever theme is currently on screen. */
+.theme-index {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  width: 24px;
+  transform: translateY(-50%);
+}
+.theme-index .spine {
+  position: relative;
+  width: 12px;
+  height: 46px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: -1px 0 0 rgba(0, 0, 0, 0.15);
+  animation: spine-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.theme-index .spine:hover,
+.theme-index .spine:focus-visible,
+.theme-index .spine[aria-current="true"] {
+  width: 24px;
+}
+.theme-index .spine:focus-visible {
+  outline-offset: -2px;
+}
+/* invisible hit-area extension — visual size unchanged, tap target grows */
+.theme-index .spine::after {
+  content: "";
+  position: absolute;
+  inset: -2px -6px;
+}
+.theme-index .spine[aria-current="true"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 5px 7px 5px 0;
+  border-color: transparent var(--t-accent, #888) transparent transparent;
+}
+.theme-index .spine .label {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: 10px;
+  transform: translate(6px, -50%);
+  white-space: nowrap;
+  background: var(--t-bg, #fff);
+  color: var(--t-fg, #111);
+  border: 1px solid var(--t-accent, #888);
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s,
+    transform 0.2s;
+}
+.theme-index .spine:hover .label,
+.theme-index .spine:focus-visible .label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+@keyframes spine-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 640px) {
+  .theme-index {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    flex-direction: row;
+    align-items: flex-end;
+    width: auto;
+    height: 24px;
+    transform: translateX(50%);
+  }
+  .theme-index .spine {
+    width: 32px;
+    height: 12px;
+    border-radius: 5px 5px 0 0;
+    animation-name: spine-in-up;
+  }
+  .theme-index .spine::after {
+    inset: -14px -2px 0;
+  }
+  .theme-index .spine:hover,
+  .theme-index .spine:focus-visible,
+  .theme-index .spine[aria-current="true"] {
+    height: 24px;
+  }
+  .theme-index .spine[aria-current="true"]::before {
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 5px 7px 5px;
+    border-color: transparent transparent var(--t-accent, #888) transparent;
+  }
+  .theme-index .spine .label {
+    top: auto;
+    right: auto;
+    bottom: 100%;
+    left: 50%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    transform: translate(-50%, 6px);
+  }
+  .theme-index .spine:hover .label,
+  .theme-index .spine:focus-visible .label {
+    transform: translate(-50%, 0);
+  }
+  @keyframes spine-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ============ LANGUAGE TOGGLE (structural base — each theme overrides look) ============ */
+.lang-toggle {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: normal;
+}
+
+/* ============ THEME SWITCH CROSSFADE (View Transitions API) ============ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+}
+
+/* ============ REDUCED MOTION (theme-agnostic) ============ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .theme-index .spine {
+    animation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
