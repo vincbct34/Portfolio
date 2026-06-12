@@ -2,6 +2,7 @@ node_modules
 dist
 *.local
 .codegraph
+.rtk
 
 # Editor
 .vscode/*

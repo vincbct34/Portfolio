@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     mediaClass: "media-4",
     image: "/projects/404-factory.webp",
     tags: ["WordPress", "Web Dev", "Freelance"],
-    href: "https://404-factory.com",
+    href: "https://www.404-factory.com",
   },
   {
     num: "05",
