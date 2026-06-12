@@ -154,10 +154,12 @@ body {
   font-size: clamp(1.3rem, 2.6vw, 2rem);
   line-height: 1.45;
   max-width: 34ch;
+  margin: 0 auto;
+  text-align: center;
   border: none;
 }
 .about-body {
-  margin-top: 2.2rem;
+  margin: 2.2rem auto 0;
   max-width: 54ch;
   color: #6e6e6a;
   line-height: 1.7;

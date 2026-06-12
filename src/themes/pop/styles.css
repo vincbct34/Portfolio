@@ -211,11 +211,13 @@ body {
   font-size: clamp(1.4rem, 3.2vw, 2.4rem);
   line-height: 1.4;
   max-width: 32ch;
+  margin: 0 auto;
+  text-align: center;
   border: none;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .about-body {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
   max-width: 58ch;
   color: #fff;
   line-height: 1.7;
