@@ -1,6 +1,6 @@
 # Portfolio
 
-Multi-theme portfolio — same DOM, eight visual identities. Built with Vite, React 19 and TypeScript.
+Single-page portfolio — one fixed design, bilingual (English / French). Built with Vite, React 19 and TypeScript.
 
 ## Commands
 
@@ -16,32 +16,36 @@ Multi-theme portfolio — same DOM, eight visual identities. Built with Vite, Re
 
 ```
 src/
-├── components/      # One component per page section + ThemePicker
-├── data/            # Content: projects, site info (email, socials)
-├── theme/           # ThemeProvider (state, localStorage, CSS injection)
-├── themes/          # One folder per theme: copy (index.tsx) + styles.css
-└── styles/base.css  # Theme-agnostic skeleton + picker styles
+├── components/      # One component per page section + ProjectCard, LangToggle, icons, VoidField, Factory404Hero
+├── data/            # content (UI strings), projects, reviews, site info
+├── i18n/            # Lang type + LangProvider (state, localStorage) + useLang hook
+└── styles/base.css  # Single global stylesheet
 ```
 
-## How theming works
+## How language works
 
-Every theme is a `Theme` object (`src/themes/types.ts`): a name, a picker
-swatch, a `copy` object (the theme's voice — all visible text) and a
-stylesheet imported as a string (`styles.css?inline`).
+`CONTENT` in `src/data/content.ts` holds every UI string, keyed by language
+(`en` / `fr`) under the `SiteContent` shape. `LangProvider` owns the active
+language — initial value from `localStorage` then `navigator.language` —
+persists it (`vb-lang`) and sets `<html lang>`. Components stay
+language-agnostic: they read copy via `useLang().t` and never branch on
+language.
 
-`ThemeProvider` injects the active theme's CSS into `<style id="theme-css">`,
-sets `data-theme` on `<html>` and persists the choice in `localStorage`
-(`vb-theme`). The DOM never changes between themes — only skin and voice.
+Testimonials are fetched live from an API (`src/data/reviews.ts`). With
+`REVIEWS_ENDPOINT` empty (the default), the section is hidden.
 
 ## Adding content
 
-- **New project**: add an entry to `src/data/projects.ts`, then a matching
-  description in each theme's `projectDescriptions`.
-- **New theme**: create `src/themes/<id>/` with `index.tsx` + `styles.css`,
-  add the id to `ThemeId` in `src/themes/types.ts` and register it in
-  `src/themes/index.ts`. The picker lists themes in registration order.
+- **New UI string**: add the field to `SiteContent` in `src/data/content.ts`,
+  then fill it in for **both** `en` and `fr`.
+- **New project**: add an entry to `PROJECTS` in `src/data/projects.ts`, then a
+  matching description (same order) in **both** `PROJECT_DESCRIPTIONS_EN` and
+  `PROJECT_DESCRIPTIONS_FR`.
+- **New language**: extend the `Lang` union and `isLang` in `src/i18n/lang.ts`,
+  then add the key to `CONTENT` and `projectDescriptions`.
 
-## Reference
+## License
 
-`portfolio-multitheme (1).html` is the original single-file prototype this
-app reproduces.
+Source code is [MIT](LICENSE). Personal content — copy, project descriptions,
+images, and the "Vincent Bichat" / "404Factory" names and branding — is not
+covered and remains © 2026 Vincent Bichat, all rights reserved.

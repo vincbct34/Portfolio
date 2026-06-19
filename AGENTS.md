@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Commands
 
@@ -162,10 +162,10 @@ rtk wget <url>          # Compact download output (65%)
 ```bash
 rtk gain                # View token savings statistics
 rtk gain --history      # View command history with savings
-rtk discover            # Analyze Claude Code sessions for missed RTK usage
+rtk discover            # Analyze Codex sessions for missed RTK usage
 rtk proxy <cmd>         # Run command without filtering (for debugging)
-rtk init                # Add RTK instructions to CLAUDE.md
-rtk init --global       # Add RTK to ~/.claude/CLAUDE.md
+rtk init                # Add RTK instructions to AGENTS.md
+rtk init --global       # Add RTK to ~/.Codex/AGENTS.md
 ```
 
 ## Token Savings Overview

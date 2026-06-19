@@ -1,15 +1,19 @@
-import { ThemeProvider } from "./theme/ThemeProvider";
-import { useTheme } from "./theme/useTheme";
+import { LangProvider } from "./i18n/LangProvider";
+import { useLang } from "./i18n/useLang";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { Marquee } from "./components/Marquee";
 import { Work } from "./components/Work";
-import { About } from "./components/About";
+import { Services } from "./components/Services";
+import { Studio } from "./components/Studio";
+import { Process } from "./components/Process";
+import { Testimonials } from "./components/Testimonials";
+import { Cta } from "./components/Cta";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { ThemePicker } from "./components/ThemePicker";
 
 function AppShell() {
-  const { lang } = useTheme();
+  const { lang } = useLang();
 
   return (
     <>
@@ -19,20 +23,24 @@ function AppShell() {
       <Header />
       <main id="main">
         <Hero />
+        <Marquee />
         <Work />
-        <About />
+        <Services />
+        <Studio />
+        <Process />
+        <Testimonials />
+        <Cta />
         <Contact />
       </main>
       <Footer />
-      <ThemePicker />
     </>
   );
 }
 
 export default function App() {
   return (
-    <ThemeProvider>
+    <LangProvider>
       <AppShell />
-    </ThemeProvider>
+    </LangProvider>
   );
 }

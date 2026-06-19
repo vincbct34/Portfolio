@@ -1,23 +1,17 @@
-import { Fragment } from "react";
-import { SITE } from "../data/site";
-import { useTheme } from "../theme/useTheme";
+import { useLang } from "../i18n/useLang";
 
 export function Footer() {
-  const { copy } = useTheme();
+  const { t } = useLang();
 
   return (
     <footer className="site-footer">
-      <span>{copy.footerLine}</span>
-      <span className="socials">
-        {SITE.socials.map((social, i) => (
-          <Fragment key={social.label}>
-            {i > 0 && " · "}
-            <a href={social.href} target="_blank" rel="noopener noreferrer">
-              {social.label}
-            </a>
-          </Fragment>
-        ))}
-      </span>
+      <div className="wrap site-footer__inner">
+        <a className="logo" href="#hero" aria-label="Vincent Bichat — home">
+          VB<span className="logo__dot">.</span>
+        </a>
+        <span className="site-footer__copy">{t.footer.copyright}</span>
+        <span className="site-footer__location">{t.footer.location}</span>
+      </div>
     </footer>
   );
 }

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { useTheme } from "../theme/useTheme";
+import { useLang } from "../i18n/useLang";
 import { LangToggle } from "./LangToggle";
 
-const SECTION_IDS = ["work", "about", "contact"];
+const SECTION_IDS = ["work", "services", "process", "contact"];
 
 export function Header() {
-  const { copy } = useTheme();
+  const { t } = useLang();
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const sections = SECTION_IDS.map((id) =>
@@ -48,31 +49,52 @@ export function Header() {
     };
   }, []);
 
+  const links = [
+    { id: "work", label: t.nav.work },
+    { id: "services", label: t.nav.services },
+    { id: "process", label: t.nav.process },
+    { id: "contact", label: t.nav.contact },
+  ];
+
   return (
     <header className="site-header">
-      <span className="logo">{copy.logo}</span>
-      <nav>
-        <ul className="menu">
-          <li>
-            <a href="#work" aria-current={activeId === "work"}>
-              {copy.navWork}
-            </a>
-          </li>
-          <li>
-            <a href="#about" aria-current={activeId === "about"}>
-              {copy.navAbout}
-            </a>
-          </li>
-          <li>
-            <a href="#contact" aria-current={activeId === "contact"}>
-              {copy.navContact}
-            </a>
-          </li>
-          <li>
-            <LangToggle />
-          </li>
-        </ul>
-      </nav>
+      <div className="site-header__inner">
+        <a className="logo" href="#hero" aria-label="Vincent Bichat — home">
+          VB<span className="logo__dot">.</span>
+        </a>
+
+        <nav className={`nav ${open ? "is-open" : ""}`} aria-label="Primary">
+          <ul className="nav__menu">
+            {links.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  aria-current={activeId === link.id}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="site-header__right">
+          <LangToggle />
+          <a className="btn btn--primary btn--sm header-cta" href="#contact">
+            {t.nav.cta}
+          </a>
+          <button
+            className="nav-toggle"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
+      </div>
     </header>
   );
 }
