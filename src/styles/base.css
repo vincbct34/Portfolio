@@ -1217,6 +1217,16 @@ section {
   .hero__media {
     display: none;
   }
+  .studio__panel {
+    display: none;
+  }
+  .studio__site {
+    transform: none;
+  }
+  .studio__peek {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
 }
 
 /* ============ REDUCED MOTION ============ */
