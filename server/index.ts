@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { serve } from "@hono/node-server";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
@@ -62,9 +63,55 @@ app.post("/api/contact", async (c) => {
   return c.json({ ok: true });
 });
 
+// The built English shell. The French page is the same shell with a localized
+// `<head>` injected at request time, so each language has its own indexable
+// URL (`/` → English, `/fr` → French) without a separate build.
+const ORIGIN = "https://www.vincent-bichat.fr";
+const EN_TITLE = "Vincent Bichat — Full-Stack Developer & Studio 404Factory";
+const FR_TITLE = "Vincent Bichat — Développeur Full-Stack & Studio 404Factory";
+const EN_DESC =
+  "Vincent Bichat — full-stack developer and founder of the studio 404Factory. I build modern web apps and sites with React, Next.js, and TypeScript that businesses are proud to send people to.";
+const FR_DESC =
+  "Vincent Bichat — développeur full-stack et fondateur du studio 404Factory. Je conçois des applications et sites web modernes en React, Next.js et TypeScript dont les entreprises sont fières.";
+const EN_TWITTER_DESC =
+  "Full-stack developer and founder of the studio 404Factory. Modern web apps and sites built with React, Next.js, and TypeScript.";
+const FR_TWITTER_DESC =
+  "Développeur full-stack et fondateur du studio 404Factory. Applications et sites web modernes en React, Next.js et TypeScript.";
+
+let cachedShell: string | null = null;
+const enShell = () =>
+  (cachedShell ??= readFileSync("./dist/index.html", "utf8"));
+
+// Swap the English `<head>` defaults for their French counterparts. Targets
+// full attribute strings so unrelated URLs (og:image, JSON-LD) are untouched.
+const frShell = () =>
+  enShell()
+    .replace('<html lang="en">', '<html lang="fr">')
+    .replace(
+      '<link rel="canonical" href="https://www.vincent-bichat.fr/" />',
+      `<link rel="canonical" href="${ORIGIN}/fr" />`,
+    )
+    .replace(
+      '<meta property="og:url" content="https://www.vincent-bichat.fr/" />',
+      `<meta property="og:url" content="${ORIGIN}/fr" />`,
+    )
+    .replace(
+      '<meta property="og:locale" content="en_US" />',
+      '<meta property="og:locale" content="fr_FR" />',
+    )
+    .replace(
+      '<meta property="og:locale:alternate" content="fr_FR" />',
+      '<meta property="og:locale:alternate" content="en_US" />',
+    )
+    .replaceAll(EN_TITLE, FR_TITLE)
+    .replaceAll(EN_DESC, FR_DESC)
+    .replaceAll(EN_TWITTER_DESC, FR_TWITTER_DESC);
+
 // Serve the built SPA in production. Vite handles assets during `npm run dev`.
+app.get("/", (c) => c.html(enShell()));
+app.get("/fr", (c) => c.html(frShell()));
 app.use("/*", serveStatic({ root: "./dist" }));
-app.get("/*", serveStatic({ path: "./dist/index.html" }));
+app.get("/*", (c) => c.html(enShell()));
 
 serve({ fetch: app.fetch, port: PORT }, ({ port }) => {
   console.log(`Server listening on http://localhost:${port}`);
