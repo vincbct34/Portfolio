@@ -4,20 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-| Command             | Action                       |
-| ------------------- | ---------------------------- |
-| `npm run dev`       | Start dev server             |
-| `npm run build`     | Production build (`dist/`)   |
-| `npm run lint`      | ESLint                       |
-| `npm run typecheck` | `tsc --noEmit`               |
-| `npm run preview`   | Preview the production build |
+| Command              | Action                                  |
+| -------------------- | --------------------------------------- |
+| `npm run dev`        | Start Vite dev server (frontend)        |
+| `npm run dev:server` | Start Hono backend with watch (`:3001`) |
+| `npm run build`      | Production build (`dist/`)              |
+| `npm start`          | Run backend serving `dist/` + `/api`    |
+| `npm run lint`       | ESLint                                  |
+| `npm run typecheck`  | `tsc --noEmit`                          |
+| `npm run preview`    | Preview the production build            |
 
 No test suite exists. CI (`.github/workflows/ci.yml`) runs `npm ci`, `npm run lint`, `npm run build`, `npx tsc --noEmit`, plus `npm audit` and a trufflehog secret scan on push/PR to `main`.
 
 ## Architecture
 
-Single-page portfolio: one fixed design, bilingual (English / French). Vite + React 19 + TypeScript, no router, no backend.
+Single-page portfolio: one fixed design, bilingual (English / French). Vite + React 19 + TypeScript, no router. A thin Hono backend (`server/index.ts`) serves the built SPA and exposes `POST /api/contact`, which sends the contact form via Resend.
 
+- `server/index.ts` — Hono server. Serves `dist/` and handles `POST /api/contact`: validates `{ name, email, message }`, sends mail through Resend (`RESEND_API_KEY`), `from` = `CONTACT_FROM`, `to` = `CONTACT_TO`, `reply-to` = visitor's email. Deployed on Railway (`npm start` → `tsx server/index.ts`, listens on `PORT`). In dev, run `npm run dev` (Vite, 5173) + `npm run dev:server` (backend, 3001); Vite proxies `/api` to the backend. Copy `.env.example` → `.env`.
 - `src/App.tsx` — wraps everything in `LangProvider` and renders the section components in order: `Header`, `Hero`, `Marquee`, `Work`, `Services`, `Studio`, `Process`, `Testimonials`, `Cta`, `Contact`, `Footer`.
 - `src/components/` — one component per page section, plus `ProjectCard`, `LangToggle`, `icons`, and two decorative pieces (`VoidField`, `Factory404Hero`). Components render structure only and pull all visible text from `useLang().t`.
 - `src/i18n/` — language layer.

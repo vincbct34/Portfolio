@@ -81,6 +81,9 @@ export interface SiteContent {
       message: string;
       messagePlaceholder: string;
       send: string;
+      sending: string;
+      success: string;
+      error: string;
     };
   };
   footer: {
@@ -212,6 +215,9 @@ const en: SiteContent = {
       message: "TELL ME ABOUT YOUR PROJECT",
       messagePlaceholder: "We're looking to build…",
       send: "Send message",
+      sending: "Sending…",
+      success: "Thanks — your message is on its way. I'll reply soon.",
+      error: "Something went wrong. Please try again or email me directly.",
     },
   },
   footer: {
@@ -344,6 +350,9 @@ const fr: SiteContent = {
       message: "PARLEZ-MOI DE VOTRE PROJET",
       messagePlaceholder: "Nous souhaitons créer…",
       send: "Envoyer le message",
+      sending: "Envoi…",
+      success: "Merci — votre message est parti. Je vous réponds vite.",
+      error: "Une erreur est survenue. Réessayez ou écrivez-moi directement.",
     },
   },
   footer: {

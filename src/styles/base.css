@@ -1090,6 +1090,15 @@ textarea:focus-visible {
   outline: none;
   border-color: var(--border-strong);
 }
+.contact__status {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.contact__status--error {
+  color: #c4513a;
+}
 
 /* ============ FOOTER ============ */
 .site-footer {

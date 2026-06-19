@@ -2,26 +2,34 @@ import { useState, type FormEvent } from "react";
 import { useLang } from "../i18n/useLang";
 import { ArrowUpRight } from "./icons";
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export function Contact() {
   const { t } = useLang();
   const { contact } = t;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
 
-  // Single source of truth: the EMAIL entry in contact.links.
-  const contactEmail =
-    contact.links
-      .find((l) => l.href.startsWith("mailto:"))
-      ?.href.slice("mailto:".length) ?? "";
-
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Project enquiry — ${name || "New message"}`,
-    );
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    if (status === "sending") return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+      setStatus("sent");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -83,10 +91,24 @@ export function Contact() {
               required
             />
           </label>
-          <button className="btn btn--primary btn--block" type="submit">
-            {contact.form.send}
+          <button
+            className="btn btn--primary btn--block"
+            type="submit"
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? contact.form.sending : contact.form.send}
             <ArrowUpRight className="btn__icon" />
           </button>
+          {status === "sent" && (
+            <p className="contact__status" role="status">
+              {contact.form.success}
+            </p>
+          )}
+          {status === "error" && (
+            <p className="contact__status contact__status--error" role="alert">
+              {contact.form.error}
+            </p>
+          )}
         </form>
       </div>
     </section>
