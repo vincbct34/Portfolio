@@ -78,6 +78,45 @@ export const PROJECTS: Project[] = [
     tags: ["Symfony", "PHP", "In progress"],
     href: "#",
   },
+  {
+    num: "07",
+    title: "MyVouch",
+    category: { en: "Web App — SaaS", fr: "Application web — SaaS" },
+    year: "2025",
+    mediaClass: "media-7",
+    tags: ["Next.js", "TypeScript", "SaaS"],
+    href: "https://www.myvouch.fr",
+  },
+  {
+    num: "08",
+    title: "GuardInput",
+    category: {
+      en: "Privacy Tool — SaaS",
+      fr: "Outil de confidentialité — SaaS",
+    },
+    year: "2025",
+    mediaClass: "media-8",
+    tags: ["TypeScript", "Browser Extension", "Privacy"],
+    href: "https://www.guardinput.com",
+  },
+  {
+    num: "09",
+    title: "GLaDOS",
+    category: { en: "Programming Language", fr: "Langage de programmation" },
+    year: "2024",
+    mediaClass: "media-9",
+    tags: ["Haskell", "Compiler", "Interpreter"],
+    href: "#",
+  },
+  {
+    num: "10",
+    title: "EPSA Mailing Tool",
+    category: { en: "Internal Tool", fr: "Outil interne" },
+    year: "2024",
+    mediaClass: "media-10",
+    tags: ["Desktop", "Automation"],
+    href: "#",
+  },
 ];
 
 /** Default project descriptions (English), same order as PROJECTS. */
@@ -88,6 +127,10 @@ export const PROJECT_DESCRIPTIONS_EN = [
   "A showcase site for the UAR ICS, Université de Montpellier's research support unit — services, projects, and news.",
   "This site — a single-page portfolio built with React, TypeScript, and Vite.",
   "An upcoming Symfony app for declaring and tracking staggered working hours — in development.",
+  "A reputation platform that turns scattered word-of-mouth into a wall of verified recommendations — each endorsement authenticated by professional email, shared employer, and confirmed identity.",
+  "A privacy layer that scans prompts and files before they reach ChatGPT, Claude, Gemini, or Copilot — detecting and masking sensitive data, PII, secrets, and metadata.",
+  "A complete programming language, with its own interpreter and compiler.",
+  "A desktop tool automating mail and email campaign workflows.",
 ];
 
 /** French counterpart of PROJECT_DESCRIPTIONS_EN, same order. */
@@ -98,6 +141,10 @@ export const PROJECT_DESCRIPTIONS_FR = [
   "Un site vitrine pour l'UAR ICS, l'unité d'appui à la recherche de l'Université de Montpellier — services, projets et actualités.",
   "Ce site — un portfolio une page construit avec React, TypeScript et Vite.",
   "Une application Symfony à venir pour déclarer et suivre les horaires décalés — en cours de développement.",
+  "Une plateforme de réputation qui transforme le bouche-à-oreille dispersé en un mur de recommandations vérifiées — chaque recommandation authentifiée par e-mail professionnel, employeur commun et identité confirmée.",
+  "Une couche de confidentialité qui analyse les prompts et fichiers avant qu'ils n'atteignent ChatGPT, Claude, Gemini ou Copilot — détection et masquage des données sensibles, PII, secrets et métadonnées.",
+  "Un langage de programmation complet, avec son propre interpréteur et compilateur.",
+  "Un logiciel desktop pour automatiser les campagnes de publipostage courrier et email.",
 ];
 
 export function projectDescriptions(lang: Lang): string[] {
